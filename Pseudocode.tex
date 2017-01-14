@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\INPUT{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\OUTPUT{\item[\algorithmicinput]}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+\begin{document}
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{k-Nearest Neighbor}
+    \begin{algorithmic}[1]
+    \INPUT{X: training data, Y:Class labels of X, $x$: unknown sample}
+     \OUTPUT{Class with the highest number of occurrence}
+      \Function{Classify}{$X,Y,x$}\
+       \For{$i = 1$ to ${m}$}
+            \State Compute distance $d{(X_i,x)}$
+        \EndFor
+        
+         \State Compute set $I$ containing indices for the $k$ smallest distances $d{(X_i,x)}$
+     
+       \State Return majority label $\{Y_i \ \text{where}\ i \in I \}$
+
+
+
+ \EndFunction
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+\end{document}
+
+
+
