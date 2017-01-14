@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{cases}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{algorithm}
@@ -11,7 +12,7 @@
 \algnewcommand\algorithmicinput{\textbf{Input:}}
 \algnewcommand\INPUT{\item[\algorithmicinput]}
 \algnewcommand\algorithmicoutput{\textbf{Output:}}
-\algnewcommand\OUTPUT{\item[\algorithmicinput]}
+\algnewcommand\OUTPUT{\item[\algorithmicoutput]}
 
 
 \usepackage{geometry}
@@ -49,6 +50,53 @@
 \end{algorithmic}
 \end{algorithm}
 \end{enumerate}
+
+\begin{enumerate}
+
+\item Ensemble Algorithm
+  \begin{algorithm}
+   \caption{Adaboost}
+    \begin{algorithmic}[1]
+    \INPUT 
+    \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
+    \Statex Large number of classifiers denoted by $f_m(x) \in \{-1,1\} $
+    \Statex 0-1 loss function $I$ defined as 
+ \begin{numcases}{ I(f_m(x,y))=}
+  0, & if $ f_m(x_i) = y_i $\\
+  1, &  if $ f_m(x_i) \neq y_i $
+\end{numcases}
+     \OUTPUT{The final classifier}
+     
+       \For{$i = 1$ to ${N}$}
+       \For{$i = 1$ to ${M}$}
+            \State Fit weak classifier m to minimize the objective function:
+            \State $\epsilon_m =  \frac{\sum_{i=1}^N w_{i}^m I(f_m(x_i)) \neq y_i}{x^2+2x+1} $
+            \State where  $I(f_m(x_i) \neq y_i) =1 \  \text{if} \ f_m(x_i) \neq y_i  $ and 0 otherwise
+            \State $\alpha_m = \ln \frac{1- \epsilon_m}{\epsilon_m}$
+            
+        \EndFor
+         \For{ all $i$ }
+              \State $w_{i}^ {m+1} = w_{i} ^{(m)} e^{\alpha_{mI(f_m(x_i) \neq y_i)}} $ 
+         \EndFor 
+         
+        
+        \EndFor
+        
+        
+
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
 \end{document}
 
 
