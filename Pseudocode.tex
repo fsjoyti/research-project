@@ -90,8 +90,78 @@
 \end{enumerate}
 
 
+\begin{enumerate}
+
+\item Another Pseudocode for Adaboost
+  \begin{algorithm}
+   \caption{Adaboost}
+    \begin{algorithmic}[1]
+    \INPUT 
+    \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
+   
+     \OUTPUT{The final classifier}
+    \State Given Training data $\{(x_i,y_i) \ \text{where}\  \  y_i \in \{-1,1\} \}$
+    \State initialize $D_1$ = uniform distribution on training examples
+       \For{$t = 1$ to ${T}$}
+   
+            \State Train weak classifier $h_t \  \text{on}\   \   D_t $
+            \State choose $\alpha_t > 0 $
+            \State compute new distribution $D_{t+1}$:
+             \For{ all $i$ }
+              \State multiply $D_t(x)$ by \begin{numcases}{}
+  e^{-\alpha_t}, &  ($<1$) $ \text{if}\  \  y_i = h_t(x_i) $\\
+   e^{\alpha_t}, & ($>1$) $ \text{if}\  \  y_i \neq h_t(x_i) $
+\end{numcases}
+\State renormalize
+         \EndFor 
+         
+  \State output final classifier $H_final(x) = sign (\sum\alpha_t h_t(x))$
+            
+        
+        
+         
+        
+        \EndFor
+        
+        
 
 
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Random forest}
+    \begin{algorithmic}[1]
+    \INPUT{S: training set, F:Features and number of trees in forest $B$}
+     \OUTPUT{Constructed tree}
+      \Function{RANDOMFOREST}{$S,F$}\
+      \State $H \leftarrow  \emptyset $
+       \For{$i \in 1,....B$ }
+            \State $S^{(i)}\leftarrow \text{A bootstrap sample from} \  S $
+            \State $h_i \leftarrow RANDOMIZEDTREELEARN(S^{i},F)$
+            \State $H \leftarrow H \bigcup \{h_i\}$
+        \EndFor
+        \State return $H$
+         
+
+
+
+ \EndFunction
+
+  \Function{RANDOMIZEDTREELEARN}{$S,F$}\ 
+  \State At each node:
+  \State $f \leftarrow \text{a very small subset of} \ F $
+  \State Split on best feature in $f$
+  \State return The learned tree
+   \EndFunction
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
 
 
 
