@@ -163,8 +163,71 @@
 \end{algorithm}
 \end{enumerate}
 
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Iterative Dichotomiser 3}
+    \begin{algorithmic}[1]
+    \INPUT{$D:\text{Training Data}, \ X: \text{Set of Input  Attributes} $}
+     \OUTPUT{A decision tree}
+      \Function{ID3}{$D,X$}\
+      \State Let $T$ be a new tree 
+     \If {all instances in $D$ have the same class $c$}
+      \State Label ($T$) = $c$; Return $T$
+      \EndIf
+      \If {$X= \emptyset\ \text{or no attribute has positive information gain} $}
+      \State Label ($T$) = most common class in $D$; Return $T$
+      \EndIf
+      \State $X \leftarrow \ \text{attribute with highest information gain} $
+      \State Label($T$) = $X$
+       \For{$\text{each value} \ x \  \text{of} \ X$ }
+            \State $D_x \leftarrow \ \text{instances in} \ D \ \text{with} \ X = x $
+           \If {$D_x \ \text{is empty}$}
+           \State Let $T_x \ \text{be a new tree}$
+           \State Label($T_x$) = most common class in $D$
+           \Else {\State $T_x$ = ID3($D_x,X-\{x\}$)}
+           \EndIf
+            \State Add a branch from $T$ to $T_x$ labeled by $x$
+        \EndFor
+        \State return $T$
+         
 
 
+
+ \EndFunction
+
+ 
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Perceptron}
+    \begin{algorithmic}[1]
+    \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
+     \OUTPUT{$Weights$}
+    
+       \For{$i = 1$ to ${iterations_{max}}$}
+            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
+            \State $Activation_i \leftarrow ActivateNetwork(Pattern_i,Weights)$
+            \State $Output_i \leftarrow TransferActivation(Activation_i)$
+            \State $UpdateWeights(Pattern_i,Output_i,learn_{rate})$
+        \EndFor
+        
+       
+       \State Return $Weights$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
 
 
 \end{document}
