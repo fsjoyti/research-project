@@ -24,6 +24,7 @@
  top=20mm,
  bottom=20mm,
  }
+ \usepackage{physics}
 
 \begin{document}
 \begin{enumerate}
@@ -332,6 +333,65 @@
 \end{algorithm}
 \end{enumerate}
 
+\begin{enumerate}
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Hierarchial Agglomerative Algorithm}
+    \begin{algorithmic}[1]
+    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \Statex $d_c. \text{Distance measure for two clusters}$}
+     \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
+     \State $C = \{\{v\mid v \in V\}\} $ \Comment{Initial Clustering}
+     \State $V_t = \{v_C\mid C \in C\},E_T = \emptyset$ \Comment{Initial Dendogram}
+     \While{$\abs{C} > 1$}
+     \State $update\_distance\_matrix(C,G,d_c)$
+     \State $\{C,C'\} =  \underset{\{C_i,C_j\} \in C : C_i \neq C_j}{argmin} d_c (C_i,C_j)$
+     \State $C = (C \backslash \{C,C'\}) \cup \{C \cup C'\}$ \Comment{Merging}
+     \State $V_T = V_T \cup \{v_{C,C'}\},E_T = E_T \cup \{\{v_{C,C'} ,v_{C}\},\{v_{C,C'} ,v_{C}\}\}$ \Comment{Dendogram}
+     \EndWhile
+    
+      
+        
+       
+       \State Return $T$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+\begin{enumerate}
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Hierarchial Divisive Algorithm}
+    \begin{algorithmic}[1]
+    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \Statex $d_c. \text{Distance measure for two clusters}$}
+     \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
+     \State $C = \{ V\} $ \Comment{Initial Clustering}
+     \State $V_t = \{v_C\mid C \in C\},E_T = \emptyset$ \Comment{Initial Dendogram}
+     \While{$\exists{C_x}:(C_x \in C \wedge \abs{C} > 1)$}
+     \State $update\_distance\_matrix(C,G,d_c)$
+     \State $\{C,C'\} =  \underset{\{C_i,C_j\}  : C_i \cup C_j = C_x   \wedge \  C_i \cap C_j = \emptyset}{argmax} d_c (C_i,C_j)$
+     \State $C = (C \backslash \{C,C'\}) \cup \{C \cup C'\}$ \Comment{Merging}
+     \State $V_T = V_T \cup \{v_{C,C'}\},E_T = E_T \cup \{\{v_{C,C'} ,v_{C}\},\{v_{C,C'} ,v_{C}\}\}$ \Comment{Dendogram}
+     \EndWhile
+    
+      
+        
+       
+       \State Return $T$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
 
 \end{document}
 
