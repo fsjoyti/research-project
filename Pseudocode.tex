@@ -229,6 +229,109 @@
 \end{algorithm}
 \end{enumerate}
 
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Back-propagation}
+    \begin{algorithmic}[1]
+    \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
+     \OUTPUT{$Network$}
+     \State $Network \leftarrow ConstructNetworkLayers()$
+     \State $Network_weights \leftarrow InitializeWeights(Network,ProblemSize)$
+    
+       \For{$i = 1$ to ${iterations_{max}}$}
+            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
+            \State $Output_i \leftarrow ForwardPropagate(Pattern_i,Network)$
+            \State $BackwardPropagateError(Pattern_i,Output_i,Network)$
+            \State $UpdateWeights(Pattern_i,Output_i,Network,learn_{rate})$
+        \EndFor
+        
+       
+       \State Return $Network$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Learning Vector Quantization}
+    \begin{algorithmic}[1]
+    \INPUT{$ProblemSize,InputPatterns,iterations_{max},CodebookVectors_{num},learn_{rate}$}
+     \OUTPUT{$CodebookVectors$}
+     \State $CodebookVectors \leftarrow InitializeCodebookVectors(CodebookVectors_{num},ProblemSize) $
+     
+    
+       \For{$i = 1$ to ${iterations_{max}}$}
+            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
+            \State $Bmu_i \leftarrow SelectBestMatchingUnit(Pattern_i,CodebookVectors)$
+            \For{$Bmu_i ^{attribute} \in Bmu_i $}
+            \If{$Bmu_i^{class} \equiv Pattern_i^{class} $}
+            \State $Bmu_i^{attribute} \leftarrow Bmu_i^{attribute} + learn_{rate} \times (Pattern_i ^{attribute} - Bmu_i ^{attribute})  $
+            \Else { \State $Bmu_i^{attribute} \leftarrow Bmu_i^{attribute} - learn_{rate} \times (Pattern_i ^{attribute} - Bmu_i ^{attribute})  $}
+            \EndIf
+            
+            \EndFor
+           
+        \EndFor
+        
+       
+       \State Return $CodebookVectors$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{Self Organizing Map}
+    \begin{algorithmic}[1]
+    \INPUT{$InputPatterns,iterations_{max},learn_{rate},Grid_width,Grid_height$}
+     \OUTPUT{$CodebookVectors$}
+     \State $CodebookVectors \leftarrow InitializeCodebookVectors(Grid_{width},Grid_{height},InputPatterns) $
+     
+    
+       \For{$i = 1$ to ${iterations_{max}}$}
+            \State $Learn_{rate}^i \leftarrow CalculateLearningRate(i,learn_{rate}^{init})$
+            \State $neighborhood_{size}^i \leftarrow CalculateNeighborhoodSize(i,neighborhood_{init}^{size})$
+            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
+             \State $Bmu_i \leftarrow SelectBestMatchingUnit(Pattern_i,CodebookVectors)$
+             \State $Neighborhood \leftarrow Bmu_i$
+              \State $Neighborhood \leftarrow  SelectNeighbors(Bmu_i,CodebookVectors,neighborhood_{size}^i)$
+            \For{$Vector_i  \in Neighborhood $}
+            \For{$Vector_i^{attribute}  \in Vector_i $}
+            \State $Vector_i^{attribute} \leftarrow Vector_i^{attribute} + learn_{rate} \times (Pattern_i ^{attribute} - Vector_i ^{attribute})  $
+            \EndFor
+          
+            
+            \EndFor
+           
+        \EndFor
+        
+       
+       \State Return $CodebookVectors$
+
+
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
 
 \end{document}
 
