@@ -27,9 +27,7 @@
  \usepackage{physics}
 
 \begin{document}
-\begin{enumerate}
 
-\item Machine Learning Algorithms Pseudocode
   \begin{algorithm}
    \caption{k-Nearest Neighbor}
     \begin{algorithmic}[1]
@@ -50,7 +48,7 @@
 
 \end{algorithmic}
 \end{algorithm}
-\end{enumerate}
+
 
 \begin{enumerate}
 
@@ -392,6 +390,32 @@
 \end{algorithmic}
 \end{algorithm}
 \end{enumerate}
+
+\begin{enumerate}
+
+\item Machine Learning Algorithms Pseudocode
+  \begin{algorithm}
+   \caption{The Apiori Algorithm}
+    \begin{algorithmic}[1]
+    \INPUT{$T: \text{transaction datasets}, \epsilon:\text{support threshold}$}
+     \OUTPUT{Frequent itemsets}
+   \While{$L_k \neq \emptyset$}
+       \For{$i = 1$ to ${m}$}
+            \State Compute distance $d{(X_i,x)}$
+        \EndFor
+        
+         \State Compute set $I$ containing indices for the $k$ smallest distances $d{(X_i,x)}$
+     
+       \State Return majority label $\{Y_i \ \text{where}\ i \in I \}$
+
+\EndWhile
+
+ 
+
+\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
 
 \end{document}
 
