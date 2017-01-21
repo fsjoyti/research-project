@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+
+\bibitem{randomforest1}
+M.~Bernstein.
+\newblock Random forests {@ONLINE}, 2016.
+
+\bibitem{perceptron1}
+J.~Brownlee.
+\newblock Clever algorithms: Nature-inspired programming recipes {@ONLINE},
+  2015.
+
+\bibitem{backpropagation12}
+J.~Brownlee.
+\newblock Clever algorithms: Nature-inspired programming recipes {@ONLINE},
+  2015.
+
+\bibitem{learningvector3}
+J.~Brownlee.
+\newblock Clever algorithms: Nature-inspired programming recipes {@ONLINE},
+  2015.
+
+\bibitem{som3}
+J.~Brownlee.
+\newblock Clever algorithms: Nature-inspired programming recipes {@ONLINE},
+  2015.
+
+\bibitem{c4.5}
+W.~Dai and W.~Ji.
+\newblock A mapreduce implementation of c4.5 decision tree algorithm {@ONLINE},
+  2014.
+
+\bibitem{adaboostsecond}
+A.~Hertzmann, D.J. Fleet, and M~Brubaker.
+\newblock Adaboost {@ONLINE}, 2015.
+
+\bibitem{adaboostfirst}
+R.~Schapire.
+\newblock Machine learning algorithms for classification {@ONLINE}, 2014.
+
+\bibitem{haa1}
+B.~Stein.
+\newblock Unit hierarchial cluster analysis {@ONLINE}, 2016.
+
+\bibitem{hda1}
+B.~Stein.
+\newblock Unit hierarchial cluster analysis {@ONLINE}, 2016.
+
+\bibitem{knearest91}
+B.~Tay, J.K. Hyun, and O.~Sejong.
+\newblock A machine learning approach for specification of spinal cord injuries
+  using fractional anisotropy values obtained from diffusion tensor images
+  {@ONLINE}, 2014.
+
+\end{thebibliography}

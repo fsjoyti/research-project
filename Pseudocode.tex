@@ -1,9 +1,12 @@
 \documentclass[a4paper]{article}
 
 \usepackage[english]{babel}
+
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{cite}
+
 \usepackage{cases}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
@@ -42,7 +45,8 @@
 
 
   \begin{algorithm}
-   \caption{k-Nearest Neighbor}
+ 
+   \caption{k-Nearest Neighbor  ~ \cite{knearest91} }
     \begin{algorithmic}[1]
     \INPUT{X: training data, Y:Class labels of X, $x$: unknown sample}
      \OUTPUT{Class with the highest number of occurrence}
@@ -65,7 +69,7 @@
 
 
   \begin{algorithm}
-   \caption{Adaboost}
+   \caption{Adaboost  ~ \cite{adaboostfirst}}
     \begin{algorithmic}[1]
     \INPUT 
     \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
@@ -102,7 +106,7 @@
 
 
   \begin{algorithm}
-   \caption{Adaboost}
+   \caption{Adaboost ~\cite{adaboostsecond}}
     \begin{algorithmic}[1]
     \INPUT 
     \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
@@ -140,7 +144,7 @@
 
 
   \begin{algorithm}
-   \caption{Random forest}
+   \caption{Random forest ~\cite{randomforest1}}
     \begin{algorithmic}[1]
     \INPUT{S: training set, F:Features and number of trees in forest $B$}
      \OUTPUT{Constructed tree}
@@ -209,7 +213,7 @@
 
 
   \begin{algorithm}
-   \caption{Perceptron}
+   \caption{Perceptron ~\cite{perceptron1}}
     \begin{algorithmic}[1]
     \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
      \OUTPUT{$Weights$}
@@ -233,7 +237,7 @@
 
 
   \begin{algorithm}
-   \caption{Back-propagation}
+   \caption{Back-propagation  ~\cite{backpropagation12}}
     \begin{algorithmic}[1]
     \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
      \OUTPUT{$Network$}
@@ -260,7 +264,7 @@
 
 
   \begin{algorithm}
-   \caption{Learning Vector Quantization}
+   \caption{Learning Vector Quantization ~\cite{learningvector3}}
     \begin{algorithmic}[1]
     \INPUT{$ProblemSize,InputPatterns,iterations_{max},CodebookVectors_{num},learn_{rate}$}
      \OUTPUT{$CodebookVectors$}
@@ -274,10 +278,8 @@
             \If{$Bmu_i^{class} \equiv Pattern_i^{class} $}
             \State $Bmu_i^{attribute} \leftarrow Bmu_i^{attribute} + learn_{rate} \times (Pattern_i ^{attribute} - Bmu_i ^{attribute})  $
             \Else { \State $Bmu_i^{attribute} \leftarrow Bmu_i^{attribute} - learn_{rate} \times (Pattern_i ^{attribute} - Bmu_i ^{attribute})  $}
-            \EndIf
-            
-            \EndFor
-           
+            \EndIf 
+            \EndFor  
         \EndFor
         
        
@@ -293,7 +295,7 @@
 
 
   \begin{algorithm}
-   \caption{Self Organizing Map}
+   \caption{Self Organizing Map ~\cite{som3} }
     \begin{algorithmic}[1]
     \INPUT{$InputPatterns,iterations_{max},learn_{rate},Grid_width,Grid_height$}
      \OUTPUT{$CodebookVectors$}
@@ -329,7 +331,7 @@
 
 
   \begin{algorithm}
-   \caption{Hierarchial Agglomerative Algorithm}
+   \caption{Hierarchial Agglomerative Algorithm ~\cite{haa1}}
     \begin{algorithmic}[1]
     \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
     \Statex $d_c. \text{Distance measure for two clusters}$}
@@ -358,7 +360,7 @@
 
 
   \begin{algorithm}
-   \caption{Hierarchial Divisive Algorithm}
+   \caption{Hierarchial Divisive Algorithm ~\cite{hda1}}
     \begin{algorithmic}[1]
     \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
     \Statex $d_c. \text{Distance measure for two clusters}$}
@@ -385,29 +387,59 @@
 \end{algorithm}
 
 
-
-  \begin{algorithm}
-   \caption{The Apiori Algorithm}
-    \begin{algorithmic}[1]
-    \INPUT{$T: \text{transaction datasets}, \epsilon:\text{support threshold}$}
-     \OUTPUT{Frequent itemsets}
-   \While{$L_k \neq \emptyset$}
-       \For{$i = 1$ to ${m}$}
-            \State Compute distance $d{(X_i,x)}$
-        \EndFor
-        
-         \State Compute set $I$ containing indices for the $k$ smallest distances $d{(X_i,x)}$
-     
-       \State Return majority label $\{Y_i \ \text{where}\ i \in I \}$
-
-\EndWhile
-
+ \begin{algorithm}
  
+   \caption{C4.5  ~\cite{c4.5} }
+    \begin{algorithmic}[1]
+    \INPUT{
+    \Statex $T : \text{Training dataset} $
+    \Statex $S : \text{Attributes} $
+    }
+     \OUTPUT{decision tree $Tree$}
+     \Function{C4.5}{$T$}\
+      \If {$T \  \text{is} \  NULL $}
+      \State return failure
+      \EndIf
+      
+      \If {$S \  \text{is} \  NULL $}
+      \State return $Tree \  \text{as a single node with most frequent class label in}\  T$ 
+      \EndIf
+     
+      \If {$\abs{S} = 1 $}
+      \State return $Tree \  \text{as a single node}\  S $ 
+      \EndIf
+      
+   \State set $Tree = \{\}$
+   
+       \For{$a \in S$ }
+       \State set $Info(a,T) = 0$  and $SplitInfo(a,T) = 0$
+       \State compute $Entropy(a)$
+         \For{$v \in values(a,T)$ }
+       \State set $T_{a,v}  \text{as the subset of} \  T \  \text{with attribute}\ a = v$  
+       \State  $Info(a,T) + = \frac{\abs{T_{a,v}}}{\abs{T_{a}}} Entropy(a)$
+       \State $SplitInfo(a,T)+= - \frac{\abs{T_{a,v}}}{\abs{T_{a}}} \log \frac{\abs{T_{a,v}}}{\abs{T_{a}}} $
+          \EndFor
+          \State $Gain(a,T) = Entropy(a) - Info(a,T)$
+          \State  $GainRatio(a,T) = \frac{Gain(a,T)}{SplitInfo(a,T)}$
+          \EndFor
+       \State set $a_{best} = argmax \{GainRatio(a,T)\}$
+       \State $a_{best} \text{into} \  Tree$
+        \For{$v \in values(a_{best},T)$ }
+       call $C4.5(T_{a,v})$
+        \EndFor
+        \State return $Tree$
+        
+  \EndFunction
+  
 
 \end{algorithmic}
 \end{algorithm}
 
 
+ 
+
+\bibliographystyle{plain}
+\bibliography{Bibiliography}
 
 
 \end{document}
