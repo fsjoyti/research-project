@@ -1,26 +1,20 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Pseudocode.aux
-The style file: plain.bst
+The style file: apalike.bst
 Database file #1: Bibiliography.bib
-Warning--entry type for "learningvector3" isn't style-file defined
---line 1 of file Bibiliography.bib
-Warning--entry type for "backpropagation12" isn't style-file defined
---line 8 of file Bibiliography.bib
-Warning--entry type for "perceptron1" isn't style-file defined
---line 15 of file Bibiliography.bib
 Warning--entry type for "randomforest1" isn't style-file defined
---line 24 of file Bibiliography.bib
+--line 26 of file Bibiliography.bib
 Warning--entry type for "adaboostsecond" isn't style-file defined
---line 31 of file Bibiliography.bib
+--line 33 of file Bibiliography.bib
 Warning--entry type for "adaboostfirst" isn't style-file defined
---line 38 of file Bibiliography.bib
+--line 40 of file Bibiliography.bib
 Warning--entry type for "knearest91" isn't style-file defined
---line 45 of file Bibiliography.bib
+--line 47 of file Bibiliography.bib
 Warning--entry type for "som3" isn't style-file defined
---line 52 of file Bibiliography.bib
+--line 54 of file Bibiliography.bib
 Warning--entry type for "haa1" isn't style-file defined
---line 59 of file Bibiliography.bib
+--line 61 of file Bibiliography.bib
 Warning--entry type for "hda1" isn't style-file defined
---line 66 of file Bibiliography.bib
+--line 68 of file Bibiliography.bib
 Warning--entry type for "c4.5" isn't style-file defined
---line 74 of file Bibiliography.bib
-(There were 11 warnings)
+--line 76 of file Bibiliography.bib
+(There were 8 warnings)
