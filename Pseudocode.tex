@@ -177,7 +177,7 @@
 
 
   \begin{algorithm}
-   \caption{Iterative Dichotomiser 3}
+   \caption{Iterative Dichotomiser 3 ~\cite{id3algo1}}
     \begin{algorithmic}[1]
     \INPUT{$D:\text{Training Data}, \ X: \text{Set of Input  Attributes} $}
      \OUTPUT{A decision tree}
@@ -435,8 +435,150 @@
 \end{algorithmic}
 \end{algorithm}
 
+\begin{algorithm}
+ 
+   \caption{Gradient Descent }
+    \begin{algorithmic}[1]
+    \INPUT{ \Statex $f$
+    \Statex starting value $x_{1}$
+    \Statex termination tolerances
+    }
+     \OUTPUT{$x_{maxIters}$}
+      
+       \For{$i = 1$ to ${maxIters}$}
+            \State Compute the search direction $d_t = - \delta f(x_{t})$
+            \If {$\abs{d_{T}} < \epsilon_{g} $}
+            	\State return "Converged to critical point", output $x_t$
+            	\State Find $\alpha_{t}$ so that $f(x_{t}+\alpha_{t}d_{t}) < f(x_t)$
+            \EndIf
+            
+             \If {$\abs{\alpha_{t}d_{T}} < \epsilon_{x} $}
+            	\State return "Converged in x", output $x_t$
+            	\State Find $\alpha_{t}$ so that $f(x_{t}+\alpha_{t}d_{t}) < f(x_t)$
+            	
+            \EndIf
+            \State Let $x_{t+1} = x_t + \alpha_{t}d_{t}$
+            
+            
+        \EndFor
+        
+       
+       \State Return "Max number of iterations reached", output $x_{maxIters}$
+       
+       
 
 
+
+
+
+\end{algorithmic}
+\end{algorithm}
+
+ \begin{algorithm}
+ 
+   \caption{Naive Bayes }
+    \begin{algorithmic}[1]
+    \INPUT{
+    \Statex $C : \text{A fixed set of classes}$
+     \Statex $D : \text{ Documents}$
+    }
+     \OUTPUT{ a predicted class $c \in C$}
+      \Function{TrainMultinomialNB}{$C,D$}\
+       
+      \State $V \leftarrow EXTRACTVOCABULARY(D)$
+      \State $N \leftarrow COUNTDOCS(D)$
+       \For{ each $c \in C$ }
+       \State $N_c \leftarrow COUNTDOCSINCLASS(D,c)$
+       \State $prior\abs{c} \leftarrow N_{c}/N $
+       \State $text_c \leftarrow CONCATENATETEXTOFALLDOCSINCLASS(D,C)$
+       \For{ each $t \in V$ }
+       \State $condprob\abs{t}\abs{c} \leftarrow  \frac{T_{ct}+1}{\sum_{t'}(T_{ct'+1})}$
+      \EndFor
+      \EndFor
+      \State return $V,prior,condprob$
+
+ \EndFunction
+ 
+ \Function{ApplyMultinomialNB}{$C,D,prior,condprob,d$}\
+ \State $W  \leftarrow EXTRACTTOKENSFROMDOC(V,d)$
+ 
+   \For{ each $c \in C$ }
+    \State $score\abs{c} \leftarrow  \log \  prior\abs{c}   $
+     \For{ each $t \in W$ }
+     \State $score\abs{c} += \log condprob\abs{t}\abs{c}$
+     
+      \EndFor
+  \EndFor
+ \State return $arg \ max_{c \in C} score\abs{c}$
+  \EndFunction
+ 
+
+\end{algorithmic}
+\end{algorithm}
+
+
+ \begin{algorithm}
+ 
+   \caption{Lasso Regression }
+    \begin{algorithmic}[1]
+    \INPUT{
+    \Statex $ipy:\text{Inner product vector}, ipy_{i} = < y, X._{i} > $
+    \Statex $ipx:\text{Inner product matrix}, ipx_{ij} = < X._{i},X._{j} > $
+    \Statex $\lambda : \text{Penalty parameter}$
+    \Statex $N:\text{Number of samples}$
+    
+    }
+     \OUTPUT{$beta : \text{Regression parameter vector}$}
+      \Function{FastLasso}{$ipy,ipx,\lambda , N$}\
+      \State $\texttt{stop\_thr}$ \Comment{Threshold for stopping iteration}
+      \State $p \leftarrow length(ipy)$
+      \State $beta \leftarrow 0 \ \text{with length} \ p$
+\State $gc \leftarrow 0 \ \text{with length} \ p$
+ \While{$difBeta_{max} \geq \texttt{stop\_thr}  $}
+ 
+ \State $difBeta_{max} \leftarrow  0 $
+ 
+ \For{$j = 1 \leftarrow p $}
+ \State $z \leftarrow (ipy\abs{j} - gc\abs{j})/N +beta\abs{j}$
+ \State $\texttt{beta\_tmp} \leftarrow max(0,z-\lambda)- max(0,-z-\lambda) $
+ \State $difBeta \leftarrow \texttt{beta\_tmp}  - beta\abs{j}$
+ \State $difabs \leftarrow abs(difBeta)$
+  \If{$difabs > 0$}
+  \State $beta\abs{j} \leftarrow \texttt{beta\_tmp} $ 
+  \State $gc \leftarrow gc + ipx\abs{j} \times difBeta$
+  \State $difBeta_{max} = max(difBeta_{max},difabs)$
+  \EndIf
+ \EndFor
+\EndWhile
+
+
+ \EndFunction
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+ 
+   \caption{Logistic Regression  }
+    \begin{algorithmic}[1]
+    \INPUT{X: training data, Y:Class labels of X, $x$: unknown sample}
+     \OUTPUT{Class with the highest number of occurrence}
+      \Function{Classify}{$X,Y,x$}\
+       \For{$i = 1$ to ${m}$}
+            \State Compute distance $d{(X_i,x)}$
+        \EndFor
+        
+         \State Compute set $I$ containing indices for the $k$ smallest distances $d{(X_i,x)}$
+     
+       \State Return majority label $\{Y_i \ \text{where}\ i \in I \}$
+
+
+
+ \EndFunction
+
+\end{algorithmic}
+\end{algorithm}
 
 
  
