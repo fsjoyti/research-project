@@ -43,23 +43,19 @@
 \begin{document}
 
 \begin{enumerate}
-\item Classification
+\item Classification 
 	\begin{enumerate}
-		\item  K-Nearest Neighbor 
-		\item  Naive Bayes
-	\end{enumerate}
-
-\item Ensemble Algorithms
-	\begin{enumerate}
-		\item Adaboost 
-		\item Random Forest
-	\end{enumerate}
-	
-	\item Decision Tree Algorithms
-	\begin{enumerate}
+	\item  K-Nearest Neighbor 
+	\item Adaboost 
 	\item Iterative Dichotomiser 3
 	\item C4.5
-\end{enumerate}
+	\item Naive Bayes
+	\item  Bagging
+	\end{enumerate}
+ 
+
+	
+	
 \item Neural Networks
 \begin{enumerate}
 	\item Perceptron
@@ -72,7 +68,24 @@
 
 \item Clustering Algorithms
 \begin{enumerate}
-   \item Hierarchial Clustering
+   \item Hierarchial Agglomerative Clustering
+    \item Hierarchial Division Clustering
+\end{enumerate}
+
+\item Regression Algorithms
+\begin{enumerate}
+   \item Lasso Regression
+\end{enumerate}
+
+\item Deep Learning Algorithms
+\begin{enumerate}
+   \item Deep Q-Learning 
+\end{enumerate}
+
+
+\item Other Methods
+\begin{enumerate}
+   \item Gradient Descent
 \end{enumerate}
 
 \end{enumerate}
@@ -102,17 +115,8 @@
 \end{algorithmic}
 \end{algorithm}
 
-\begin{enumerate}
 
-\item Here are some link to open source implementations of these algorithms
-	\begin{enumerate}
-		\item \href{url}{https://github.com/saurfang/spark-knn}
-		\item \href{url}{https://github.com/ethz-asl/libnabo}
-		\item \href{url}{https://github.com/johnmyleswhite/kNN.jl}
-	
-	\end{enumerate}
 
-\end{enumerate}
 
 
 
@@ -183,12 +187,13 @@
         
         \EndFor
         
-        
+       
 
 
 \end{algorithmic}
 \end{algorithm}
 
+  
 
 
   \begin{algorithm}
@@ -204,6 +209,8 @@
             \State $H \leftarrow H \bigcup \{h_i\}$
         \EndFor
         \State return $H$
+        
+        
          
 
 
@@ -219,6 +226,8 @@
 
 \end{algorithmic}
 \end{algorithm}
+
+
 
 
 
@@ -606,29 +615,148 @@
 \end{algorithm}
 
 
-\begin{algorithm}
+  \begin{algorithm}
  
-   \caption{Logistic Regression  }
+   \caption{Bagging }
     \begin{algorithmic}[1]
-    \INPUT{X: training data, Y:Class labels of X, $x$: unknown sample}
-     \OUTPUT{Class with the highest number of occurrence}
-      \Function{Classify}{$X,Y,x$}\
-       \For{$i = 1$ to ${m}$}
-            \State Compute distance $d{(X_i,x)}$
+    \INPUT{ \Statex B: the number of bags or base hypotheses
+    \Statex L: Base Learning Algorithm}
+     \OUTPUT{New Training Sets}
+      \Function{Bagging}{$examples,B,L$}\
+       \For{$i = 1$ to ${B}$}
+            \State $examples_{i} \leftarrow \text{a bootstrap sample of }  examples$
         \EndFor
         
          \State Compute set $I$ containing indices for the $k$ smallest distances $d{(X_i,x)}$
+         \State $h_i  \leftarrow \text{apply} L \text{to} examples_{i}$
      
-       \State Return majority label $\{Y_i \ \text{where}\ i \in I \}$
+       \State Return $h_{1},h_{2},...h_{B}$
 
 
 
  \EndFunction
+ 
+ \end{algorithmic}
+\end{algorithm}
+
+ \begin{algorithm}
+ 
+   \caption{Deep Q-Learning with Experience Replay ~\cite{{DBLP:journals/corr/MnihKSGAWR13}} }
+    \begin{algorithmic}[1]
+    \INPUT{ \Statex D: data set
+    \Statex Q: Action-Value Function}
+     \OUTPUT{New Training Sets}
+     
+       \For{$i = 1$ to ${M}$}
+            \State Initialise sequence $s_{1} = \{x_{1}\}$ and preprocessed sequenced $\phi = \phi(s_1)$
+             \For{$i = 1$ to ${T}$}
+             \State With probability $\epsilon$ select a random action $a_{t}$ otherwise select $a_{t} = max_{a}Q*(\phi(s_{t}).a:\theta)$
+             \State Execute action $a_{t}$ in emulator and observe reward  r and image $x_{t+1}$
+             \State Set $s_{t+1} = s_{t},a_{t},x_{t+1}$ and preprocess $\phi_{t+1} = \phi(s_{t+1})$
+             \State Store transition $(\phi_{t},a_{t},r_{t},\phi_{t+1})$ in $D$
+               \State Set $y_{j} = $  \begin{numcases}{}
+  r_{j}, &   $ \text{for terminal}\  \  \phi_{j+1} $\\
+   r_{j}+\gamma max_{a'}Q(\phi_{j+1,a';\theta}) , &  $ \text{for terminal}\  \phi_{j+1} $
+\end{numcases}
+\State Perform a gradient descent step on $(y_j - Q (\phi_{j} ,a_{j};\theta))^2$ according to the following equation 
+\State $$\Delta_{\theta}L_{i}(\theta_{i}) = \mathbb{E}_{s,a\sim\rho(.);s'\sim \epsilon [(r + \gamma max_{a'}Q(s',a';\theta_{i-1}) - Q (s,a;\theta_{i}))\Delta_{\theta_{i}}Q(s,a;\theta_{i})]  } $$
+              \EndFor
+        \EndFor
+        
+
+
+
+ 
+
 
 \end{algorithmic}
 \end{algorithm}
 
 
+ \begin{algorithm}
+ 
+   \caption{PageRank }
+    \begin{algorithmic}[1]
+    \INPUT{ \Statex $G$: inlink file
+    \Statex $iteration$: Number of iteration}
+     \OUTPUT{PageRank}
+      \Function{PageRank}{$G,iteration$} \
+      \State $d \leftarrow 0.85 $ \Comment{damping factor: 0.85}
+      \State $oh \leftarrow G $ \Comment{get outlink hash from G}
+      \State $ih \leftarrow G $ \Comment{get inlink hash from G}
+      \State $N \leftarrow G $ \Comment{get number of pages from G}
+       \For{all $p \  \text{in the graph}$}
+            \State $opg[p] \leftarrow \frac{1}{N}$
+        \EndFor
+        \While{$iteration > 0$}
+        \State $dp \leftarrow 0 $
+        \For{all $p \  \text{that has no out-links }$}
+        \State $dp \leftarrow dp + d * \frac{opg[p]}{N} $
+        \EndFor
+        \For{all $p \  \text{in the graph}$}
+        \State $npg[p] \leftarrow dp +  \frac{[1-d]}{N}$
+        \For{all $ip \  \text{in}\  ih[p]$}
+        \State $npg[p] \leftarrow dp +  \frac{d*opg[ip]}{oh[ip]}$
+        \EndFor
+        \EndFor
+        \State $opg \leftarrow npg$
+        \State $iteration \leftarrow iteration -1$
+        \EndWhile
+        
+         
+
+
+ \EndFunction
+ 
+ \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+ 
+   \caption{DBSCAN }
+    \begin{algorithmic}[1]
+    \INPUT{
+    \Statex $D$: Data
+    \Statex $\epsilon$:Threshold distance
+    \Statex $MinPts$ : Minimum number of points required to form a cluster 
+    
+    }
+     \OUTPUT{Clustered Data}
+      \Function{DBSCAN}{$D,\epsilon,minPts$}\
+      \State $C = 0$
+       \For{$\text{each point}\ P \text{in dataset} D$}
+        \If {$P$ is visited}
+        \State continue next point
+      
+        \EndIf
+            \State mark P as visited
+            \State $NeighborPts = regionQuery(P,\epsilon)$
+            \If {$sizeof(NeighborPts) < MinPts$ }
+            \State mark P as NOISE
+            \Else{
+            \State $C = \text{next cluster}$
+            \State $expandCluster(P,NeighborPts,C,\epsilon, MinPts)$
+            }            
+            \EndIf
+        \EndFor
+        
+      
+
+
+
+ \EndFunction
+ 
+    \Function{expandCluster}{$P,NeighborPts,C,\epsilon,MinPts$}\
+    \State add P to Cluster C
+    \For{$\text{each point} \ P' in NeighborPts$}
+    \If{$P' \ \text{is not visited}$}
+     \State mark $P'$ as visited
+    \EndIf
+    \EndFor
+
+ \EndFunction
+\end{algorithmic}
+\end{algorithm}
  
 
 \bibliographystyle{apalike}
