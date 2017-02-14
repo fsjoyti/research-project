@@ -93,10 +93,10 @@
 
   \begin{algorithm}
  
-   \caption{k-Nearest Neighbor  ~ \cite{knearest91} }
+   \caption{k-Nearest Neighbor  ~ \cite{knearest91} link:{36} }
     \begin{algorithmic}[1]
     \INPUT{X: training data, Y:Class labels of X, $x$: unknown sample}
-     \OUTPUT{Class with the highest number of occurrence}
+     \OUTPUT{Class label of unknown sample}
       \Function{Classify}{$X,Y,x$}\
        \For{$i = 1$ to ${m}$}
             \State Compute distance $d{(X_i,x)}$
@@ -163,7 +163,7 @@
     \INPUT 
     \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
    
-     \OUTPUT{The final classifier}
+     \OUTPUT{Weighted sum that represents the final output of the boosted classifier}
     \State Given Training data $\{(x_i,y_i) \ \text{where}\  \  y_i \in \{-1,1\} \}$
     \State initialize $D_1$ = uniform distribution on training examples
        \For{$t = 1$ to ${T}$}
@@ -179,7 +179,7 @@
 \State renormalize
          \EndFor 
          
-  \State output final classifier $H_final(x) = sign (\sum\alpha_t h_t(x))$
+  \State output final classifier $H_{final(x)} = sign (\sum\alpha_t h_t(x))$
             
         
         
@@ -539,7 +539,7 @@
     \Statex $C : \text{A fixed set of classes}$
      \Statex $D : \text{ Documents}$
     }
-     \OUTPUT{ a predicted class $c \in C$}
+     \OUTPUT{Category(Class) of the Documents}
       \Function{TrainMultinomialNB}{$C,D$}\
        
       \State $V \leftarrow EXTRACTVOCABULARY(D)$
@@ -713,7 +713,7 @@
 
 \begin{algorithm}
  
-   \caption{DBSCAN }
+   \caption{DBSCAN link:{42} }
     \begin{algorithmic}[1]
     \INPUT{
     \Statex $D$: Data
@@ -757,14 +757,15 @@
      \EndIf
     \EndIf
      \If{$P' \ \text{is not yet member of any cluster}$}
+     \State add $P'$ to cluster $C$
      \EndIf
     \EndFor
 
  \EndFunction
- \Function{$P,\epsilon$}
- \State return all points within $P's \text{eps-neighborhood(including P)}$  
- \EndFunction
 
+  \Function{regionQuery}{$P,\epsilon$}\
+  \State return all points within $P's \ \epsilon \ neighborhood$
+   \EndFunction
 \end{algorithmic}
 \end{algorithm}
  
