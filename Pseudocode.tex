@@ -751,10 +751,20 @@
     \For{$\text{each point} \ P' in NeighborPts$}
     \If{$P' \ \text{is not visited}$}
      \State mark $P'$ as visited
+     \State $NeighborPts' = regionQuery(P', eps)$
+      \If {$sizeof(NeighborPts) >= MinPts$ }
+      \State  $NeighborPts = NeighborPts \ \text{joined with}\ NeighborPts'$
+     \EndIf
     \EndIf
+     \If{$P' \ \text{is not yet member of any cluster}$}
+     \EndIf
     \EndFor
 
  \EndFunction
+ \Function{$P,\epsilon$}
+ \State return all points within $P's \text{eps-neighborhood(including P)}$  
+ \EndFunction
+
 \end{algorithmic}
 \end{algorithm}
  
