@@ -76,6 +76,7 @@
 \item Regression Algorithms
 \begin{enumerate}
    \item Lasso Regression
+   \item Logistic Regression
 \end{enumerate}
 
 \item Deep Learning Algorithms
@@ -198,7 +199,7 @@
 
 
   \begin{algorithm}
-   \caption{Random forest ~\cite{randomforest1}}
+   \caption{Random forest ~\cite{randomforest1} Link:{39} }
     \begin{algorithmic}[1]
     \INPUT{S: training set, F:Features and number of trees in forest $B$}
      \OUTPUT{Constructed tree}
@@ -812,8 +813,53 @@
 \end{algorithmic}
 \end{algorithm}
 
+
+
+ \begin{algorithm}
+   \caption{Gaussian Process}
+    \begin{algorithmic}[1]
+  \INPUT 
+ \Statex $X =  \begin{bmatrix}
+ 	x_{1}^T\\
+ 	\hdotsfor{1}\\
+    x_{n}^T 
+ \end{bmatrix} \in 	\mathbb{R}^{ n \times D} , \text{m training inputs}
+ $
  
+  \Statex $y =  \begin{bmatrix}
+ 	y_{1}^T\\
+ 	\hdotsfor{1}\\
+    y_{n}^T 
+ \end{bmatrix} \in 	\mathbb{R}^{ n}
+ $ 
+ \Statex $k(.,.): \mathbb{R}^ {D \times D}$
+ \Statex $x_{*} \text{test input}$
+ \Statex $\sigma^{2} \text{noise level on the observations}$
+ $$[y(x) = f(x) + \epsilon , \epsilon \sim N (0, \sigma^{2})] $$
+\OUTPUT{
+\Statex ${f_{*}}$
+\Statex $cov(f_{*})$
+}
+
+\State $K \in \mathbb{R}^{n \times n} \text{Gram matrix}. K_{ij} = k(x_{i}, x_{j})
+$
+
+$$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
+	k{(x_{1},x_{*})}\\
+ 	\hdotsfor{1}\\
+    k{(x_{n},x_{*})}
+ \end{bmatrix} \in \mathbb{R}
+ $$
  
+ \State $\alpha = (K + \sigma_{2}\mathbb{I}_{n})^{-1}y$
+ \State $f_{*} = k_{*}^{T}\alpha \in \mathbb{R} $
+ 
+ \State $cov(f_{*}) = k(x_{*},x_{*}) - k_{*}^T[K+\sigma_{2}\mathbb{I}n]^{-1}k_{*}$
+
+
+
+\end{algorithmic}
+\end{algorithm}
  
  
  \newpage
