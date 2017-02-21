@@ -51,6 +51,7 @@
 	\item C4.5
 	\item Naive Bayes
 	\item  Bagging
+	\item  Random Forest
 	\end{enumerate}
  
 
@@ -769,7 +770,54 @@
 \end{algorithmic}
 \end{algorithm}
  
+
+
+  
+
+
+
+
+
+
+  \begin{algorithm}
+   \caption{Logistic Regression }
+    \begin{algorithmic}[1]
+    \INPUT 
+    \Statex Training data of the form $\{(x_{1},1),(x_{2},0),..\}$
+    \Statex  $x$: unknown sample
+     \OUTPUT{The output is a probability that the given input point belongs to a certain class}
+    \State $0 \leftarrow \beta$
+ \State Compute y by setting its elements to
+   \begin{numcases}{ y =}
+  1, & if $g_{i} = 1 $\\
+  0, &  if $g_{i} = 2 $
+\end{numcases}
+ i = 1,2,..N
+ \State Compute p by setting its elements to
+ $$p(x_{i},\beta) = \frac{e^{\beta^{T}x_{i}}}{1+ e^{\beta^{T}x_{i}}} $$   i = 1,2,..N
+ 
+\State Compute the diagonal matrix W. The ith diagonal element is  $p(x_{i},\beta)(1-p(x_{i};\beta))$
+    
+\State $z \leftarrow X\beta + W ^{-1}(y - p) $
+
+\State $\beta \leftarrow (X^{T}WX)^{-1}X^{T}Wz$
+
+\State If the stopping criteria,stop;otherwise go back to step 3
+    
+     
+       
+        
+
+
+\end{algorithmic}
+\end{algorithm}
+
+ 
+ 
+ 
+ 
  \newpage
+
 
 \bibliographystyle{apalike}
 \bibliography{Bibiliography}
