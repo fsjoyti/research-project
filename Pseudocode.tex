@@ -12,6 +12,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{mathtools}
 \algnewcommand\algorithmicinput{\textbf{Input:}}
 \algnewcommand\INPUT{\item[\algorithmicinput]}
 \algnewcommand\algorithmicoutput{\textbf{Output:}}
@@ -299,7 +300,7 @@
   \begin{algorithm}
    \caption{Back-propagation  ~\cite{backpropagation12}}
     \begin{algorithmic}[1]
-    \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
+    \INPUT{$ProblemSize,InputPatterns,iterations_{max},learn_{rate}$}
      \OUTPUT{$Network$}
      \State $Network \leftarrow ConstructNetworkLayers()$
      \State $Network_weights \leftarrow InitializeWeights(Network,ProblemSize)$
@@ -321,6 +322,30 @@
 \end{algorithmic}
 \end{algorithm}
 
+
+\begin{algorithm}
+   \caption{Back-propagation1  }
+    \begin{algorithmic}[1]
+    \INPUT{
+    \Statex Training Set ${x^{(1)}, y^{(1)},,....,(x^{(m)},y^{(m)})}$}
+    \OUTPUT{
+    \Statex Gradient of the cost function}
+    \State $\Delta_{ij}^{(l)} = 0 \text{(for all l,i,j)}$
+     \For{$i = 1$ to ${m}$}
+     \State Set $a^{(1)} = x ^ {(i)}$
+     \State Perform forward propagation to compute $a^{(l)} \  \text{for} \  l =2,3,....L$
+     \State Using $y^(i)$, compute $\delta^(L) = a^(L) - y^(i)$
+     \State Compute $\delta^(L-1),\delta^(L-2),....\delta^(2) $
+    \State $\Delta_{ij}^{(l)} \coloneqq \Delta_{ij}^{(l)} + a_{j}^{(l)}\delta_{i}^{(l+1)} $
+      \EndFor
+      \State $D_{ij}^{(l)} \coloneqq \frac{1}{m} \Delta_{ij} + \lambda \theta_{ij}^{(l)} \  \text{if}\  j \neq 0 $
+      \State $D_{ij}^{(l)} \coloneqq \frac{1}{m} \Delta_{ij} \  \text{if}\  j = 0 $ 
+      
+    
+    
+    
+\end{algorithmic}
+\end{algorithm}
 
 
   \begin{algorithm}
@@ -861,6 +886,9 @@ $$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
 
 \end{algorithmic}
 \end{algorithm}
+
+
+
  
  
  \newpage
