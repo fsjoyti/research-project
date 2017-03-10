@@ -47,6 +47,7 @@
 \item Classification 
 	\begin{enumerate}
 	\item  K-Nearest Neighbor 
+	\item Support Vector Machines
 	\item Adaboost 
 	\item Iterative Dichotomiser 3
 	\item C4.5
@@ -887,8 +888,29 @@ $$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
 \end{algorithmic}
 \end{algorithm}
 
+\begin{algorithm}
+ \title{Support Vector Machines}
+    \begin{algorithmic}[1]
+    \INPUT {
+    \Statex Set of N input-output pairs $\{x,y\}^{N_1}$ x: input vectors of the same dimension and y : set of output target labels $ y_i = \{0,1\} $
+    }
+ \section{Simplest case : linearly-separable data,binary classification}
+ 
+\paragraph{}
+ Goal:we want to find the hyperplane(i.e. decision boundary)linearly
+ separating our classes. Our boundary will have the equation: $\textbf{w}^ \textbf{T}\textbf{x}+ \textbf{b} = 0$
+ 
+ \paragraph{}
+ Anything above the decision boundary should have label 1 i.e., $\textbf{w}^\textbf{T}\textbf {x}_{i} + b  > 0 $ will have corresponding $y_{i} = 1$
+ 
+\paragraph{}
+Similarly, anything below the decision boundary should have label -1.
+
+    
 
 
+\end{algorithmic}
+\end{algorithm}
  
  
  \newpage
