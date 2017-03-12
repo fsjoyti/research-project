@@ -904,9 +904,37 @@ $$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
  Anything above the decision boundary should have label 1 i.e., $\textbf{w}^\textbf{T}\textbf {x}_{i} + b  > 0 $ will have corresponding $y_{i} = 1$
  
 \paragraph{}
-Similarly, anything below the decision boundary should have label -1.
+Similarly, anything below the decision boundary should have label -1 i.e.
+ $\textbf{w}^\textbf{T}\textbf {x}_{i} + b  < 0 $ will have corresponding $y_{i} = - 1$
 
-    
+\paragraph{}
+The reason for this labeling scheme is that it lets us condense for the decision function to 
+$$f(x) = sign(\textbf{w}^\textbf{T} + b )$$ since $f(x) = +1 $ for all x above the boundary , and $f(x) = -1$ for all x below the boundary.
+
+\paragraph{}
+Thus, we can figure out if an instance has been classified properly by checking that $y(\textbf{w}^\textbf{T} + b ) \geq 1 $ (which will be the case as long as either both $y, \textbf{w}^\textbf{T} + b > 0 \  \text{or else} \  y,   \textbf{w}^\textbf{T} + b < 0 $)
+
+\paragraph{}
+You'll notice that we will now have some space between our decision boundary and the nearest data points of either class. Thus,let's rescale the data such that anything on or above the boundary $\textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is of one class(with label 1), and anything on or below the boundary $\textbf{w}^\textbf{T}\textbf {x} + b = -1 $ is of another class (with label -1)
+
+\paragraph{}
+What is the distance between these newly added boundaries?
+\paragraph{}
+First note that the two lines are parallel,and thus share their parameters $w,b$.Pick an arbitary point $x_{1}$ to lie on line $ \textbf{w}^\textbf{T}\textbf {x} + b = -1 $. Then the closest point on line $ \textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is the point $\textbf{x}_{2} = \textbf{x}_{1} + \lambda\textbf{w} $(since the closest point will always lie on the perpendicular;recall that the vector $\textbf{w}$ is perpendicular to both lines). Using this formulation, $\lambda\textbf{w}$ will be the line segment segment connecting $\textbf{x}_{1}$ and $\textbf{x}_{2}$ , and thus, $\lambda\ \|\textbf{w}\|$, the distance between $\textbf{x}_{1}$ and $\textbf{x}_{2}$ is the shortest distance between the two lines/boundaries. Solving for $\lambda$ : $\textbf{w}^\textbf{T}\textbf{x}_{2} + b = 1$ where $\textbf{x}_{2} = \textbf{x}_{1} +   \lambda\textbf{w} $ \newline $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ \newline $\textbf{w}^\textbf{T}\textbf{x}_{1} + b + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1 $ where $\textbf{w}^\textbf{T}\textbf{x}_{1} + b = -1 $  \newline $-1 + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1$ \newline $\lambda\textbf{w}^\textbf{T}\textbf{w} = 2$
+\newline $\lambda = \frac{2}{\textbf{w}^\textbf{T}\textbf{w}}  = \frac{2}{\|\textbf{w}\|^2}$ \newline And, so the distance $\lambda\|w\| is   \frac{2}{\|\textbf{w}\|^2}\|w\| = \frac{2}{\|w\|} = \frac{2}{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}$
+
+\paragraph{}
+It's intuitive that we would want to maximize the distance between the two boundaries demarcating the classes(Why?We want to be as sure that we are not making classification mistakes and thus we want our data points from the two classes to lie as far away from each other as possible).This distance is called the margin,so went to obtain the maximal margin.
+
+\paragraph{}
+Thus, we want to maximize $\frac{2}{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}$, which is equivalent to minimizing $\frac{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}{2}$ which is in turn equivalent to minimizing $\frac{\textbf{w}^\textbf{T}\textbf{w}}{2}$(since square root is a monotonic function)
+
+\paragraph{}
+This quadratic programming problem is expressed as :\newline
+ $min_{w,b}\frac{\textbf{w}^\textbf{T}\textbf{w}}{2}$ \newline
+ subject to : $y_{i}(\textbf{w}^{T}\textbf{x} + b) \geq 1 (\forall \ \text{data points} \ \textbf{x}_{i} )$
+
+
 
 
 \end{algorithmic}
