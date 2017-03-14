@@ -6,12 +6,12 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{cite}
-
+\usepackage{caption}
 \usepackage{cases}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{algorithm}
-\usepackage{algpseudocode}
+\usepackage[compatible]{algpseudocode}
 \usepackage{mathtools}
 \algnewcommand\algorithmicinput{\textbf{Input:}}
 \algnewcommand\INPUT{\item[\algorithmicinput]}
@@ -40,6 +40,8 @@
 }
  
 \urlstyle{same}
+
+
 
 \begin{document}
 
@@ -888,13 +890,23 @@ $$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
 \end{algorithmic}
 \end{algorithm}
 
+
 \begin{algorithm}
- \title{Support Vector Machines}
-    \begin{algorithmic}[1]
+ \caption{Support Vector Machines}
+    \begin{algorithmic}
     \INPUT {
     \Statex Set of N input-output pairs $\{x,y\}^{N_1}$ x: input vectors of the same dimension and y : set of output target labels $ y_i = \{0,1\} $
     }
- \section{Simplest case : linearly-separable data,binary classification}
+ 
+ 
+  \includegraphics[width=\linewidth]{svm.jpg}
+  
+  \label{fig:svm1}
+
+
+
+ 
+ \section{ Simple case : linearly-separable data,binary classification}
  
 \paragraph{}
  Goal:we want to find the hyperplane(i.e. decision boundary)linearly
@@ -920,28 +932,116 @@ You'll notice that we will now have some space between our decision boundary and
 \paragraph{}
 What is the distance between these newly added boundaries?
 \paragraph{}
-First note that the two lines are parallel,and thus share their parameters $w,b$.Pick an arbitary point $x_{1}$ to lie on line $ \textbf{w}^\textbf{T}\textbf {x} + b = -1 $. Then the closest point on line $ \textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is the point $\textbf{x}_{2} = \textbf{x}_{1} + \lambda\textbf{w} $(since the closest point will always lie on the perpendicular;recall that the vector $\textbf{w}$ is perpendicular to both lines). Using this formulation, $\lambda\textbf{w}$ will be the line segment segment connecting $\textbf{x}_{1}$ and $\textbf{x}_{2}$ , and thus, $\lambda\ \|\textbf{w}\|$, the distance between $\textbf{x}_{1}$ and $\textbf{x}_{2}$ is the shortest distance between the two lines/boundaries. Solving for $\lambda$ : $\textbf{w}^\textbf{T}\textbf{x}_{2} + b = 1$ where $\textbf{x}_{2} = \textbf{x}_{1} +   \lambda\textbf{w} $ \newline $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ \newline $\textbf{w}^\textbf{T}\textbf{x}_{1} + b + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1 $ where $\textbf{w}^\textbf{T}\textbf{x}_{1} + b = -1 $  \newline $-1 + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1$ \newline $\lambda\textbf{w}^\textbf{T}\textbf{w} = 2$
+First note that the two lines are parallel,and thus share their parameters $w,b$.Pick an arbitary point $x_{1}$ to lie on line $ \textbf{w}^\textbf{T}\textbf {x} + b = -1 $. Then the closest point on line $ \textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is the point $\textbf{x}_{2} = \textbf{x}_{1} + \lambda\textbf{w} $(since the closest point will always lie on the perpendicular;recall that the vector $\textbf{w}$ is perpendicular to both lines). Using this formulation, $\lambda\textbf{w}$ will be the line segment segment connecting $\textbf{x}_{1}$ and $\textbf{x}_{2}$ , and thus, $\lambda\ \|\textbf{w}\|$, the distance between $\textbf{x}_{1}$ and $\textbf{x}_{2}$ is the shortest distance between the two lines/boundaries. Solving for $\lambda$ : $\textbf{w}^\textbf{T}\textbf{x}_{2} + b = 1$ where $\textbf{x}_{2} = \textbf{x}_{1} +   \lambda\textbf{w} $ \newline $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ 
+
+
+
+
+ \algstore{myalg}
+
+\end{algorithmic}
+\end{algorithm}
+
+\clearpage
+
+\begin{algorithm}
+  \ContinuedFloat
+  \caption{Support Vector Machines (continued)}
+  \begin{algorithmic}
+      \algrestore{myalg}
+      \State 
+$\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ \newline $\textbf{w}^\textbf{T}\textbf{x}_{1} + b + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1 $ where $\textbf{w}^\textbf{T}\textbf{x}_{1} + b = -1 $  \newline $-1 + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1$ \newline $\lambda\textbf{w}^\textbf{T}\textbf{w} = 2$
 \newline $\lambda = \frac{2}{\textbf{w}^\textbf{T}\textbf{w}}  = \frac{2}{\|\textbf{w}\|^2}$ \newline And, so the distance $\lambda\|w\| is   \frac{2}{\|\textbf{w}\|^2}\|w\| = \frac{2}{\|w\|} = \frac{2}{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}$
+
+
 
 \paragraph{}
 It's intuitive that we would want to maximize the distance between the two boundaries demarcating the classes(Why?We want to be as sure that we are not making classification mistakes and thus we want our data points from the two classes to lie as far away from each other as possible).This distance is called the margin,so went to obtain the maximal margin.
 
-\paragraph{}
+      
+   \paragraph{}
 Thus, we want to maximize $\frac{2}{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}$, which is equivalent to minimizing $\frac{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}{2}$ which is in turn equivalent to minimizing $\frac{\textbf{w}^\textbf{T}\textbf{w}}{2}$(since square root is a monotonic function)
-
-\paragraph{}
+      
+   \paragraph{}
 This quadratic programming problem is expressed as :\newline
  $min_{w,b}\frac{\textbf{w}^\textbf{T}\textbf{w}}{2}$ \newline
  subject to : $y_{i}(\textbf{w}^{T}\textbf{x} + b) \geq 1 (\forall \ \text{data points} \ \textbf{x}_{i} )$
+   
+     
+\section{Soft-margin extension}
+
+\paragraph{}
+Consider the case that your data isn't linearly separable.For instance,
+maybe you aren’t guaranteed that all your data points are correctly labelled, so you want to allow some data points of one class to appear on the other side of
+the boundary.
 
 
+\paragraph{}
+We can introduce $slack variables \text{an}-\epsilon_{i} \geq 0$. Our quadratic programming problem becomes:\newline
+$min_{\textbf{w},b,\epsilon} \frac{\textbf{w}^\textbf{T}\textbf{w}}{2}+ C\sum_{i}\epsilon_{i}$\newline
+subject to : $y_{i}(\textbf{w}^\textbf{T}\textbf{x}_{i}+ b) \geq 1 -\epsilon$
+ 
+\section{Nonlinear decision boundary}
+
+\paragraph{}
+Mapping your data vectors, $x_{i}$,into a higher-dimension(even infinite) feature space may make them linearly separable in  that space (whereas they may not be linearly separable in the original space). The formation of the quadratic programmatic problem is as above,but with all $\textbf{x}_{i}$ replaced with $\phi(\textbf{x}_{i}),\text{where} \ \phi $provides the higher-dimensional mapping.So we have the standard SVM formulation: \newline
+$min_{\textbf{w},b,\epsilon}\frac{\textbf{w}^T\textbf{w}}{2}$\newline
+subject to : $y_{i}(\textbf{w}^T\phi(\textbf{x}_{i}) + b ) \geq 1 - \epsilon \text{and} \ \epsilon_{i} \geq 0 (\forall \  \text{data points} \  \textbf{x}_{i})$
+
+\section{Reformulating as a Lagrangian}
+\paragraph{}
+We can introduce Lagrange multipliers to represent the condition:\newline
+$y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b ))$ must be as close to 1 as possible.  This condition is captured by: $max_{ai \geq 0}\alpha_{i}[1-y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b ))]$ This ensures that when $y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b )) \geq 1$, the expression above is maximal when $\alpha_{i} = 0$(since [1- $y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b )$] ends up being negative). Otherwise, $y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b )) < 1 $, so $[1- y_{i}(\textbf{w}^T\phi(\textbf{x}_{i} + b ))]$ is a positive value, and the expression is maximal when $a_{i} \rightarrow \infty$. This has the effect of penalizing any misclassified data points, while assigning $0$ penalty to properly classified instances.
+
+\paragraph{}
+We thus have the following formulation: \newline
+$min_{w,b}[\frac{\textbf{w}^T\textbf{w}}{2} + \sum_{i}max_{\alpha \geq 0} \alpha_{i}[1-\textbf{w}^T\phi(\textbf{x}_{i} + b )]]$ \newline
+To allow for slack(soft-margin), preventing the $\alpha$ variables from going to $\infty$, we can impose constraints on the Lagrange multipliers to lie within: $0 \leq \alpha_{i} \leq C$.
+We can define the dual problem by interchanging the max and min as follows (i.e minimize after fixing alpha): \newline
+$max_{alpha \geq zero}[min_{w,b}J(\textbf{w},b;\alpha)] \text{where} \ = \frac{\textbf{w}^T\textbf{w}}{2}+ \sum_{i}\alpha_{i}[1 - y_{i}(\textbf{w}^T\phi(x_{i}) + b)]$
 
 
-\end{algorithmic}
+ \algstore{myalg}
+
+   
+ \end{algorithmic}
 \end{algorithm}
  
- 
+ \begin{algorithm}
+  \ContinuedFloat
+  \caption{Support Vector Machines (continued)}
+  \begin{algorithmic}
+      \algrestore{myalg}
+      \State
+ \paragraph{}
+Since, we're solving an optimization problem, we set $\frac{\partial  J}{\partial \textbf{w}} = 0 $ and discover that the optimal setting of $\textbf{w}$ is $\sum_{i}\alpha_{i}y_{i}\phi(x_{i}) $,while seeting $\frac{\partial  J}{\partial \textbf{b}} = 0 $ yields the constraint $\sum_{i}\alpha_{i}y_{i} = 0$
+      
+\paragraph{}
+Thus, after substituting and simplifying,we get: \newline
+$min_{w,b}J(\textbf{w},b,\alpha) = \sum_{i}\alpha_{i}\alpha_{j}y_{i}y_{j}\phi(\textbf{x}_{i})^T \phi(\textbf{x}_{j}) $
+And thus our dual is: \newline
+$max_{\alpha \geq 0}[\sum_{i}\alpha_{i} - \frac{1}{2} \sum_{i,j}\alpha_{j}y_{i}y_{j}\phi(\textbf{x}_{i})^T \phi(\textbf{x}_{j})]$\newline Subject to: $\sum_{i}\alpha_{i}y_{i} = 0  \ \text{and} \ 0 \leq \alpha_{i} \leq C$   
+      
+      
+\section{Kernel trick}
+\paragraph{}
+
+Because we're working in a higher-dimension space(and potentially even an infinite-dimensional space),calculating $\phi(\textbf{x}_{i})^T \phi(\textbf{x}_{j})$ may be intractable.However, it turns out there are special $kernel$ functions that operate on the lower dimension vectors $\textbf{x}_{i}$ and $\textbf{x}_{j}$ to produce a value equivalent to the dot-product of the higher dimensional vectors.
+For instance, consider the function $\phi \mathpunct{:} \mathbb{R}^3 \longmapsto \mathbb{R}^{10} ,where: $
+$\phi(x) = (1,\sqrt{2}x^{(1)} ,\sqrt{2}x^{(2)}, \sqrt{2}x^{(3)} ,[\textbf{x}^{(1)}]^2 ,[\textbf{x}^{(2)}]^2, [\textbf{x}^{(3)}]^2, \sqrt{2}x^{(1)(2)} ,\sqrt{2}x^{(1)(3)} ,\sqrt{2}x^{(2)(3)} )  $
+Instead, we have the the kernel trick, which tells us that $K(\textbf{x}_{i},\textbf{x}_{j} ) = (1+\textbf{x}_{i}^T\textbf{x}_{j})^2 = \phi(\textbf{x}_{i})^T\phi(\textbf{x}_{j})$ for the given $\phi$. Thus, we can simplify our calculations.
+Re-writing the dual in terms of the kernel yields:
+$max_{\alpha \geq 0}[\sum_{i}\alpha_{i} - \frac{1}{2}\sum_{i,j}\alpha_{i}\alpha_{j}y_{i}y_{j}]$
+
+
+      
+      \section{Decision function}
+To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alpha_{i}$ parameters, all you have to do is calculate $f(\textbf{x}) = sign(\textbf{w}^T\textbf{x}+b) = \sum_{i}\alpha_{i}y_{i}\phi(\textbf{x}_{i}\  \text{and using the kernel trick})$. Note that $\alpha_{i}$ is only non-zero for instances $\phi(\textbf{x}_{i})$ on or near the boundary-those are called the $support vector $ since they alone specify the decision boundary. We can toss out the other data points once training is complete. Thus, we only sum over the $x_{i}$ which constitute the support vectors.
+  \end{algorithmic}
+\end{algorithm} 
+      
  \newpage
+
 
 
 \bibliographystyle{apalike}

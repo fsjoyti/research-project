@@ -1,1 +1,6 @@
-\BOOKMARK [1][-]{section.1}{Simplest case : linearly-separable data,binary classification}{}% 1
+\BOOKMARK [1][-]{section.1}{ Simple case : linearly-separable data,binary classification}{}% 1
+\BOOKMARK [1][-]{section.2}{Soft-margin extension}{}% 2
+\BOOKMARK [1][-]{section.3}{Nonlinear decision boundary}{}% 3
+\BOOKMARK [1][-]{section.4}{Reformulating as a Lagrangian}{}% 4
+\BOOKMARK [1][-]{section.5}{Kernel trick}{}% 5
+\BOOKMARK [1][-]{section.6}{Decision function}{}% 6
