@@ -303,12 +303,12 @@
 
 
   \begin{algorithm}
-   \caption{Back-propagation  ~\cite{backpropagation12}}
+   \caption{Back-propagation  ~\cite{backpropagation12} Link:17,42}
     \begin{algorithmic}[1]
     \INPUT{$ProblemSize,InputPatterns,iterations_{max},learn_{rate}$}
      \OUTPUT{$Network$}
      \State $Network \leftarrow ConstructNetworkLayers()$
-     \State $Network_weights \leftarrow InitializeWeights(Network,ProblemSize)$
+     \State $Network_{weights} \leftarrow InitializeWeights(Network,ProblemSize)$
     
        \For{$i = 1$ to ${iterations_{max}}$}
             \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
@@ -386,7 +386,7 @@
 
 
   \begin{algorithm}
-   \caption{Self Organizing Map ~\cite{som3} }
+   \caption{Self Organizing Map ~\cite{som3} Link:45 }
     \begin{algorithmic}[1]
     \INPUT{$InputPatterns,iterations_{max},learn_{rate},Grid_width,Grid_height$}
      \OUTPUT{$CodebookVectors$}
