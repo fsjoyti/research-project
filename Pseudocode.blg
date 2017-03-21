@@ -2,19 +2,20 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Pseudocode.aux
 The style file: apalike.bst
 Database file #1: Bibiliography.bib
 Warning--entry type for "randomforest1" isn't style-file defined
---line 52 of file Bibiliography.bib
+--line 130 of file Bibiliography.bib
 Warning--entry type for "adaboostsecond" isn't style-file defined
---line 59 of file Bibiliography.bib
+--line 137 of file Bibiliography.bib
 Warning--entry type for "adaboostfirst" isn't style-file defined
---line 66 of file Bibiliography.bib
+--line 144 of file Bibiliography.bib
 Warning--entry type for "knearest91" isn't style-file defined
---line 73 of file Bibiliography.bib
+--line 151 of file Bibiliography.bib
 Warning--entry type for "som3" isn't style-file defined
---line 80 of file Bibiliography.bib
+--line 158 of file Bibiliography.bib
 Warning--entry type for "haa1" isn't style-file defined
---line 87 of file Bibiliography.bib
+--line 165 of file Bibiliography.bib
 Warning--entry type for "hda1" isn't style-file defined
---line 94 of file Bibiliography.bib
+--line 172 of file Bibiliography.bib
 Warning--entry type for "c4.5" isn't style-file defined
---line 102 of file Bibiliography.bib
-(There were 8 warnings)
+--line 180 of file Bibiliography.bib
+Warning--empty year in backpropagation2
+(There were 9 warnings)

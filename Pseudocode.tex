@@ -45,6 +45,8 @@
 
 \begin{document}
 
+
+
 \begin{enumerate}
 \item Classification 
 	\begin{enumerate}
@@ -327,7 +329,7 @@
 
 
 \begin{algorithm}
-   \caption{Back-propagation1  }
+   \caption{Back-propagation2 ~\cite{backpropagation2} }
     \begin{algorithmic}[1]
     \INPUT{
     \Statex Training Set ${x^{(1)}, y^{(1)},,....,(x^{(m)},y^{(m)})}$}
@@ -342,7 +344,8 @@
     \State $\Delta_{ij}^{(l)} \coloneqq \Delta_{ij}^{(l)} + a_{j}^{(l)}\delta_{i}^{(l+1)} $
       \EndFor
       \State $D_{ij}^{(l)} \coloneqq \frac{1}{m} \Delta_{ij} + \lambda \theta_{ij}^{(l)} \  \text{if}\  j \neq 0 $
-      \State $D_{ij}^{(l)} \coloneqq \frac{1}{m} \Delta_{ij} \  \text{if}\  j = 0 $ 
+      \State $D_{ij}^{(l)} \coloneqq \frac{1}{m} \Delta_{ij} \  \text{if}\  j = 0 $
+      \State $\frac{\partial}{\partial\theta_{ij}^{(l)}}J(\theta) = D_{ij}^(l)$ 
       
     
     
@@ -525,7 +528,7 @@
 
 \begin{algorithm}
  
-   \caption{Gradient Descent }
+   \caption{Gradient Descent ~\cite{gradientdescent1} }
     \begin{algorithmic}[1]
     \INPUT{ \Statex $f$
     \Statex starting value $x_{1}$
@@ -564,7 +567,7 @@
 
  \begin{algorithm}
  
-   \caption{Naive Bayes }
+   \caption{Naive Bayes ~\cite{naivebayes1}  }
     \begin{algorithmic}[1]
     \INPUT{
     \Statex $C : \text{A fixed set of classes}$
@@ -648,7 +651,8 @@
 
   \begin{algorithm}
  
-   \caption{Bagging }
+   \caption{Bagging ~\cite{bagging1
+   } }
     \begin{algorithmic}[1]
     \INPUT{ \Statex B: the number of bags or base hypotheses
     \Statex L: Base Learning Algorithm}
@@ -706,7 +710,8 @@
 
  \begin{algorithm}
  
-   \caption{PageRank }
+   \caption{PageRank ~\cite{pagerank1
+   }  }
     \begin{algorithmic}[1]
     \INPUT{ \Statex $G$: inlink file
     \Statex $iteration$: Number of iteration}
@@ -744,7 +749,8 @@
 
 \begin{algorithm}
  
-   \caption{DBSCAN link:{42} }
+   \caption{DBSCAN link:{42}  ~\cite{dbscan1
+   }  }
     \begin{algorithmic}[1]
     \INPUT{
     \Statex $D$: Data
@@ -810,7 +816,8 @@
 
 
   \begin{algorithm}
-   \caption{Logistic Regression }
+   \caption{Logistic Regression  ~\cite{logistic1
+   } }
     \begin{algorithmic}[1]
     \INPUT 
     \Statex Training data of the form $\{(x_{1},1),(x_{2},0),..\}$
@@ -845,7 +852,8 @@
 
 
  \begin{algorithm}
-   \caption{Gaussian Process}
+   \caption{Gaussian Process ~\cite{gaussian1
+   }}
     \begin{algorithmic}[1]
   \INPUT 
  \Statex $X =  \begin{bmatrix}
@@ -892,19 +900,20 @@ $$k(x_{*}) = k_{*} = k(X,x_{*}) = \begin{bmatrix}
 
 
 \begin{algorithm}
- \caption{Support Vector Machines}
+ \caption{Support Vector Machines ~\cite{svm1
+   }}
     \begin{algorithmic}
     \INPUT {
     \Statex Set of N input-output pairs $\{x,y\}^{N_1}$ x: input vectors of the same dimension and y : set of output target labels $ y_i = \{0,1\} $
     }
- 
+ \begin{sloppypar}
  
   \includegraphics[width=\linewidth]{svm.jpg}
   
   \label{fig:svm1}
 
 
-
+\end{sloppypar}
  
  \section{ Simple case : linearly-separable data,binary classification}
  
@@ -932,7 +941,7 @@ You'll notice that we will now have some space between our decision boundary and
 \paragraph{}
 What is the distance between these newly added boundaries?
 \paragraph{}
-First note that the two lines are parallel,and thus share their parameters $w,b$.Pick an arbitary point $x_{1}$ to lie on line $ \textbf{w}^\textbf{T}\textbf {x} + b = -1 $. Then the closest point on line $ \textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is the point $\textbf{x}_{2} = \textbf{x}_{1} + \lambda\textbf{w} $(since the closest point will always lie on the perpendicular;recall that the vector $\textbf{w}$ is perpendicular to both lines). Using this formulation, $\lambda\textbf{w}$ will be the line segment segment connecting $\textbf{x}_{1}$ and $\textbf{x}_{2}$ , and thus, $\lambda\ \|\textbf{w}\|$, the distance between $\textbf{x}_{1}$ and $\textbf{x}_{2}$ is the shortest distance between the two lines/boundaries. Solving for $\lambda$ : $\textbf{w}^\textbf{T}\textbf{x}_{2} + b = 1$ where $\textbf{x}_{2} = \textbf{x}_{1} +   \lambda\textbf{w} $ \newline $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ 
+First note that the two lines are parallel,and thus share their parameters $w,b$.Pick an arbitary point $x_{1}$ to lie on line $ \textbf{w}^\textbf{T}\textbf {x} + b = -1 $. Then the closest point on line $ \textbf{w}^\textbf{T}\textbf {x} + b = 1 $ is the point $\textbf{x}_{2} = \textbf{x}_{1} + \lambda\textbf{w} $(since the closest point will always lie on the perpendicular;recall that the vector $\textbf{w}$ is perpendicular to both lines). Using this formulation, $\lambda\textbf{w}$ will be the line segment segment connecting $\textbf{x}_{1}$ and $\textbf{x}_{2}$ , and thus, $\lambda\ \|\textbf{w}\|$, the distance between $\textbf{x}_{1}$ and $\textbf{x}_{2}$ is the shortest distance between the two lines/boundaries.
 
 
 
@@ -949,7 +958,8 @@ First note that the two lines are parallel,and thus share their parameters $w,b$
   \caption{Support Vector Machines (continued)}
   \begin{algorithmic}
       \algrestore{myalg}
-      \State 
+      \State
+Solving for $\lambda$ : $\textbf{w}^\textbf{T}\textbf{x}_{2} + b = 1$ where $\textbf{x}_{2} = \textbf{x}_{1} +   \lambda\textbf{w} $ \newline $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$  
 $\textbf{w}^\textbf{T}(\textbf{x}_{1} \lambda\textbf{w}) +  b = 1$ \newline $\textbf{w}^\textbf{T}\textbf{x}_{1} + b + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1 $ where $\textbf{w}^\textbf{T}\textbf{x}_{1} + b = -1 $  \newline $-1 + \lambda\textbf{w}^\textbf{T}\textbf{w} = 1$ \newline $\lambda\textbf{w}^\textbf{T}\textbf{w} = 2$
 \newline $\lambda = \frac{2}{\textbf{w}^\textbf{T}\textbf{w}}  = \frac{2}{\|\textbf{w}\|^2}$ \newline And, so the distance $\lambda\|w\| is   \frac{2}{\|\textbf{w}\|^2}\|w\| = \frac{2}{\|w\|} = \frac{2}{\sqrt{\textbf{w}^\textbf{T}\textbf{w}}}$
 

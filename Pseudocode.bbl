@@ -1,8 +1,32 @@
 \begin{thebibliography}{}
 
-\bibitem[., 2015]{id3algo1}
-. (2015).
+\bibitem[., a]{bagging1}
+. (.a).
+\newblock Bagging.
+
+\bibitem[., b]{gaussian1}
+. (.b).
+\newblock Gaussian process.
+
+\bibitem[., c]{logistic1}
+. (.c).
+\newblock Logistic regression.
+
+\bibitem[., d]{naivebayes1}
+. (.d).
+\newblock Naive bayes.
+
+\bibitem[., e]{pagerank1}
+. (.e).
+\newblock Page rank.
+
+\bibitem[., 2015a]{id3algo1}
+. (2015a).
 \newblock Decision trees.
+
+\bibitem[., 2015b]{gradientdescent1}
+. (2015b).
+\newblock Gradient descent.
 
 \bibitem[Bernstein, 2016]{randomforest1}
 Bernstein, M. (2016).
@@ -28,6 +52,10 @@ Brownlee, J. (2015d).
 Dai, W. and Ji, W. (2014).
 \newblock A mapreduce implementation of c4.5 decision tree algorithm.
 
+\bibitem[Gavrilov, ]{svm1}
+Gavrilov, Z. (.).
+\newblock Support vector machines.
+
 \bibitem[Hertzmann et~al., 2015]{adaboostsecond}
 Hertzmann, A., Fleet, D., and Brubaker, M. (2015).
 \newblock Adaboost.
@@ -37,6 +65,16 @@ Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra,
   D., and Riedmiller, M.~A. (2013).
 \newblock Playing atari with deep reinforcement learning.
 \newblock {\em CoRR}, abs/1312.5602.
+
+\bibitem[Ng, ]{backpropagation2}
+Ng, A.
+\newblock Coursera machine learning.
+
+\bibitem[Ram et~al., 2010]{dbscan1}
+Ram, A., Jalal, S., Jalal, A.~S., and Kumar, M. (2010).
+\newblock A density based algorithm for discovering density varied clusters in
+  large spatial databases.
+\newblock {\em International Journal of Computer Applications}, 3(6):1–4.
 
 \bibitem[Schapire, 2014]{adaboostfirst}
 Schapire, R. (2014).
