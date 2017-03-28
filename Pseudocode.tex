@@ -508,6 +508,25 @@ clusters.
 \end{algorithm}
 
 
+\begin{algorithm}
+   \caption{Hierarchial Divisive Algorithm ~\cite{hda1}}
+    \begin{algorithmic}[1]
+    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \Statex $d_c. \text{Distance measure for two clusters}$}
+     \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
+     
+       \REPEAT 
+       
+     \State Create a new cluster by breaking the link corresponding to the largest distance (smallest
+similarity).
+
+ \UNTIL{Only one cluster remains}
+
+
+
+\end{algorithmic}
+\end{algorithm}
+
  \begin{algorithm}
  
    \caption{C4.5  ~\cite{c4.5} }
