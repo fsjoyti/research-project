@@ -202,7 +202,32 @@
 \end{algorithmic}
 \end{algorithm}
 
+
+ \begin{algorithm}
+   \caption{Adaboost4 ~\cite{adaboostsecond}}
+    \begin{algorithmic}[1]
+     \INPUT 
+    \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
+   
+     \OUTPUT{Weighted sum that represents the final output of the boosted classifier}
+     
+     \State Set uniform example weights.
+     
+      \For{each base learner do}
+      \State Train base learner with weighted sample.
+      \State Test base learner on all data.
+      \State Set learner weight with weighted error.
+      \State Set example weights based on ensemble predictions.
+
+
+
+
+   
+      \EndFor
+
   
+\end{algorithmic}
+\end{algorithm}
 
 
   \begin{algorithm}
@@ -856,12 +881,23 @@ similarity).
 \end{algorithm}
  
 
-
+\begin{algorithm}
+  \caption{Principle Component Analysis ~\cite{.
+   } }
   
+\begin{algorithmic}[1]
+ \INPUT
+ \Statex $x_{1},.....x_{n} \text{d length vector k}$
+ \OUTPUT{Transform matrix R}
+ \State $X \leftarrow n \times d \ \text{data matrix with } x_{i} \  \text{in each row}$
+\State  $x \leftarrow  \frac{1}{n} \sum_{i = 1}^{n} x_{i}$
+\State $X \leftarrow \text{subtract x from each row} \  x_{i} in X $
+\State $COV \leftarrow \frac{1}{n-1}X^{T} \times X \text{Compute eigenvalue} \  e_{1},....,e_{d} \  \text{of COV, and sort them }$
+\State Compute matrix $V$ which satisfy $V^{-1} \times COV \times V = D$ , $D$ is the diagonal matrix of eigenvalue of COV
+\State $R \leftarrow \text{the first}\  k \ \text{column of} \ V$
 
-
-
-
+\end{algorithmic}
+\end{algorithm}
 
 
   \begin{algorithm}
