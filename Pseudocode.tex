@@ -206,7 +206,7 @@
 
 
   \begin{algorithm}
-   \caption{Random forest ~\cite{randomforest1} Link:{39} }
+   \caption{Random forest ~\cite{randomforest1} Link:{42} }
     \begin{algorithmic}[1]
     \INPUT{S: training set, F:Features and number of trees in forest $B$}
      \OUTPUT{Constructed tree}
@@ -444,6 +444,36 @@
 
 
  
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+   \caption{Hierarchial Agglomerative Algorithm 2 ~\cite{.}}
+    \begin{algorithmic}[1]
+    
+    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \Statex $d_c. \text{Distance measure for two clusters}$}
+     \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
+      \REPEAT   
+    
+    \State Compute the proximity graph if necessary
+    
+    \State repeat
+    
+    \State Merge the closest two clusters.
+    
+    \State Update the proximity matrix to reflect the proximity between the new cluster and the original
+clusters.
+
+ \UNTIL{
+  \State Only singleton clusters remain
+ }
+
+    
+    
+    
 
 \end{algorithmic}
 \end{algorithm}
