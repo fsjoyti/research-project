@@ -11,7 +11,7 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{algorithm}
-\usepackage[compatible]{algpseudocode}
+\usepackage{algpseudocode}
 \usepackage{mathtools}
 \algnewcommand\algorithmicinput{\textbf{Input:}}
 \algnewcommand\INPUT{\item[\algorithmicinput]}
@@ -481,8 +481,9 @@
     \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
     \Statex $d_c. \text{Distance measure for two clusters}$}
      \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
-      \REPEAT   
-    
+       
+    \While{More than one cluster remains }
+       
     \State Compute the proximity graph if necessary
     
     \State repeat
@@ -492,9 +493,9 @@
     \State Update the proximity matrix to reflect the proximity between the new cluster and the original
 clusters.
 
- \UNTIL{
-  \State Only singleton clusters remain
- }
+ \EndWhile
+
+
 
     
     
@@ -540,12 +541,12 @@ clusters.
     \Statex $d_c. \text{Distance measure for two clusters}$}
      \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
      
-       \REPEAT 
+        \While{More than one cluster remains }
        
      \State Create a new cluster by breaking the link corresponding to the largest distance (smallest
 similarity).
 
- \UNTIL{Only one cluster remains}
+   \EndWhile
 
 
 
@@ -817,6 +818,46 @@ similarity).
 
 
  \EndFunction
+ 
+ \end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+ \caption{K means    }
+    \begin{algorithmic}[1]
+     
+   \INPUT{
+   \Statex $E = \{e_{1},e_{2},....e_{k}\}$
+   \Statex $k \text{(number of clusters)}$
+   \Statex $MaxIters \text{(limit of iterations)}$}
+   \OUTPUT{
+   \Statex $C = \{c_{1},c_{2},...c_{k}\}$
+   \Statex $L = \{l(e)|e = 1,2,...n\} \ \text{(set of cluster labels of E)}$
+   }
+   
+   \For{each $c_{i} \in C$}
+  \State $c_{i} \leftarrow e_{j} \in E \text{(e.g random selection)}$
+   
+    \EndFor
+    
+    \For{each $e_{i} \in E$}
+    \State $l(e_{i}) \leftarrow argminDistance(e_{i},c_{j})j \in \{1..k\} $
+      \EndFor
+      \State $changed \leftarrow false$
+      \State $iter \leftarrow 0$
+    
+    
+    
+    \For{$c_{i} \in C$}
+    \State $UpdateCluster(c_{})$
+    
+     \EndFor
+   
+   
+  
+   
+
  
  \end{algorithmic}
 \end{algorithm}
