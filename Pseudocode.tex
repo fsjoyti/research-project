@@ -535,7 +535,7 @@ clusters.
 
 
 \begin{algorithm}
-   \caption{Hierarchial Divisive Algorithm ~\cite{hda1}}
+   \caption{Hierarchial Divisive Algorithm ~\cite{hda1} Link:22 ,51}
     \begin{algorithmic}[1]
     \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
     \Statex $d_c. \text{Distance measure for two clusters}$}
@@ -847,15 +847,24 @@ similarity).
       \State $changed \leftarrow false$
       \State $iter \leftarrow 0$
     
-    
+    \While{$changed = true and iter \leq  = MaxIters $}
     
     \For{$c_{i} \in C$}
-    \State $UpdateCluster(c_{})$
+    \State $UpdateCluster(c_{i})$
     
      \EndFor
-   
-   
-  
+     
+     \For{$c_{i} \in E$}
+     \State $minDist \leftarrow argminDistance(e_{i},e_{j}) j \in \{1..k\}$
+       \If {$minDist \neq l(e_{i})$}
+       \State $l(e_i) \leftarrow minDist$
+       \State $changed \leftarrow true$
+       
+       \EndIf
+     
+    \EndFor
+   \State $ iter \texttt{+} \texttt{+}$
+      \EndWhile
    
 
  
