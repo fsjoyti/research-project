@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  3 APR 2017 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  4 APR 2017 06:12
 entering extended mode
 **./Pseudocode.tex
 (Pseudocode.tex
@@ -2151,23 +2151,23 @@ LaTeX Warning: Citation `.' on page 1 undefined on input line 478.
 LaTeX Warning: Citation `.' on page 1 undefined on input line 478.
 
 
-LaTeX Warning: Citation `.' on page 1 undefined on input line 936.
+LaTeX Warning: Citation `.' on page 1 undefined on input line 935.
 
 
-LaTeX Warning: Citation `.' on page 1 undefined on input line 936.
+LaTeX Warning: Citation `.' on page 1 undefined on input line 935.
 
 <svm.jpg, id=78, 328.72812pt x 191.21437pt>
 File: svm.jpg Graphic file (type jpg)
  <use svm.jpg>
-Package pdftex.def Info: svm.jpg used on input line 1046.
+Package pdftex.def Info: svm.jpg used on input line 1045.
 (pdftex.def)             Requested size: 473.69687pt x 275.54396pt.
 
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 1046--1047
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 1045--1046
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 5.6924pt on input line 1087.
+LaTeX Warning: Float too large for page by 5.6924pt on input line 1086.
 
 [1
 
@@ -2177,9 +2177,9 @@ ext4): destination with the same identifier (name{algorithm.28}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1153 \end{algorithm}
+l.1152 \end{algorithm}
                       
-Underfull \hbox (badness 1917) in paragraph at lines 1174--1180
+Underfull \hbox (badness 1917) in paragraph at lines 1173--1179
  [][] \OT1/cmr/m/n/10 Be-cause we're work-ing in a higher-dimension space(and p
 o-ten-tially even an infinite-dimensional
  []
@@ -2188,16 +2188,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{algorithm.28}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1186 \end{algorithm}
+l.1185 \end{algorithm}
                        (Pseudocode.bbl) [14
 
 ] [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1196.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1195.
  [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1195.
  (Pseudocode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1195.
 
 Package rerunfilecheck Info: File `Pseudocode.out' has not changed.
 (rerunfilecheck)             Checksum: 52A397F39472645207BCB2DC9B4451A4;382.
@@ -2205,12 +2205,12 @@ Package rerunfilecheck Info: File `Pseudocode.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1195.
  ) 
 Here is how much of TeX's memory you used:
  26957 strings out of 493333
  507196 string characters out of 3139182
- 664107 words of memory out of 3000000
+ 665184 words of memory out of 3000000
  29991 multiletter control sequences out of 15000+200000
  8321 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2233,7 +2233,7 @@ ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pseudocode.pdf (16 pages, 340798 bytes).
+Output written on Pseudocode.pdf (16 pages, 340829 bytes).
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  118 named destinations out of 1000 (max. 500000)
