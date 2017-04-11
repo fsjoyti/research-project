@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  4 APR 2017 06:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  11 APR 2017 10:17
 entering extended mode
 **./Pseudocode.tex
 (Pseudocode.tex
@@ -2210,7 +2210,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1195.
 Here is how much of TeX's memory you used:
  26957 strings out of 493333
  507196 string characters out of 3139182
- 665184 words of memory out of 3000000
+ 665264 words of memory out of 3000000
  29991 multiletter control sequences out of 15000+200000
  8321 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2233,7 +2233,7 @@ ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pseudocode.pdf (16 pages, 340829 bytes).
+Output written on Pseudocode.pdf (16 pages, 340873 bytes).
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  118 named destinations out of 1000 (max. 500000)
