@@ -4,21 +4,29 @@
 . (.a).
 \newblock Bagging.
 
-\bibitem[., b]{gaussian1}
+\bibitem[., b]{kmeans1}
 . (.b).
+\newblock Data mining algorithms in r/clustering/k-means.
+
+\bibitem[., c]{gaussian1}
+. (.c).
 \newblock Gaussian process.
 
-\bibitem[., c]{logistic1}
-. (.c).
+\bibitem[., d]{logistic1}
+. (.d).
 \newblock Logistic regression.
 
-\bibitem[., d]{naivebayes1}
-. (.d).
+\bibitem[., e]{naivebayes1}
+. (.e).
 \newblock Naive bayes.
 
-\bibitem[., e]{pagerank1}
-. (.e).
+\bibitem[., f]{pagerank1}
+. (.f).
 \newblock Page rank.
+
+\bibitem[., 2014]{pca1}
+. (2014).
+\newblock Principal component analysis.
 
 \bibitem[., 2015a]{id3algo1}
 . (2015a).
@@ -27,6 +35,10 @@
 \bibitem[., 2015b]{gradientdescent1}
 . (2015b).
 \newblock Gradient descent.
+
+\bibitem[., 2015c]{hierarchical1}
+. (2015c).
+\newblock Hierarchical.
 
 \bibitem[Bernstein, 2016]{randomforest1}
 Bernstein, M. (2016).
@@ -92,5 +104,11 @@ Stein, B. (2016b).
 Tay, B., Hyun, J., and Sejong, O. (2014).
 \newblock A machine learning approach for specification of spinal cord injuries
   using fractional anisotropy values obtained from diffusion tensor images.
+
+\bibitem[Wang et~al., ]{lasso1}
+Wang, T., Ren, Z., Ding, Y., Fang, Z., Sun, Z., MacDonald, M.~L., Sweet, R.~A.,
+  Wang, J., and Chen, W.
+\newblock Fastggm: An efficient algorithm for the inference of gaussian
+  graphical model in biological networks.
 
 \end{thebibliography}
