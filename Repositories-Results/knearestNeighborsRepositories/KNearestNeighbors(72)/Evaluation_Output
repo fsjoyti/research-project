@@ -1,0 +1,22 @@
+Iris Dataset:
+
+Confusion Matrix
+[[ 50.   0.   0.]
+ [  0.  46.   4.]
+ [  0.   4.  46.]]
+Accuracy = 0.946666666667
+Error Rate = 0.0533333333333
+
+Income Dataset:
+
+Confusion Matrix
+[[ 403.   17.]
+ [  61.   39.]]
+Accuracy = 0.85
+Error Rate = 0.15
+True Positive =403.0
+True Negative =39.0
+False Negative =17.0
+False Positive =61.0
+Recall =0.868534482759
+Precision =0.959523809524

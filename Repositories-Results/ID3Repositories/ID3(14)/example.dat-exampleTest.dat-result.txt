@@ -1,0 +1,9 @@
+outlook=1 :
+| humidity=1 : 1
+| humidity=2 : 0
+outlook=2 : 0
+outlook=3 :
+| wind=1 : 0
+| wind=2 : 1
+Accuracy on Training Set (14 instances ) = 100.0 %
+Accuracy on Test Set (14 instances ) = 71.42857142857143 %

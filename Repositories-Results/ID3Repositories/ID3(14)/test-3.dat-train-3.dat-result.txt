@@ -1,0 +1,3 @@
+0
+Accuracy on Training Set (6 instances ) = 0.0 %
+Accuracy on Test Set (216 instances ) = 0.0 %
