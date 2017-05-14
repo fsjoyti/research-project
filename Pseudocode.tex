@@ -52,7 +52,6 @@
 	\begin{enumerate}
 	\item  K-Nearest Neighbor (Algorithm 1)
 	\item Support Vector Machines (Algorithm 28)
-	\item Adaboost (Algorithm 2, 3, 4)
 	\item Iterative Dichotomiser 3 (Algorithm 6)
 	\item C4.5 (Algorithm 16)
 	\item Naive Bayes Multinomial Model (Algorithm 18)
@@ -95,9 +94,11 @@
 \item Other Methods
 \begin{enumerate}
    \item Gradient Descent (Algorithm 17)
+   \item Adaboost (Algorithm 2, 3, 4)
    \item Gaussian (Algorithm 22)
    \item Principal Components Analysis(Algorithm 25)
    \item Bagging (Algorithm 20)
+   \item Stacking  (Algorithm 29)
 \end{enumerate}
 
 \end{enumerate}
@@ -309,8 +310,8 @@
   \begin{algorithm}
    \caption{Perceptron ~\cite{perceptron1} Link:{65}}
     \begin{algorithmic}[1]
-    \INPUT{$ProblemSize,InputPatterns,iterations_max,learn_rate$}
-     \OUTPUT{$Weights$}
+    \INPUT{$ProblemSize,InputPatterns,iterations_{max},learn_{rate}$}
+     \OUTPUT{$  Weights(\text{Classification of the entire training set})$}
     
        \For{$i = 1$ to ${iterations_{max}}$}
             \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
@@ -824,6 +825,9 @@ similarity).
 \end{algorithm}
 
 
+
+
+
 \begin{algorithm}
  \caption{K means ~\cite{kmeans1} Link:25,29,40,104   }
     \begin{algorithmic}[1]
@@ -1185,8 +1189,35 @@ $max_{\alpha \geq 0}[\sum_{i}\alpha_{i} - \frac{1}{2}\sum_{i,j}\alpha_{i}\alpha_
 To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alpha_{i}$ parameters, all you have to do is calculate $f(\textbf{x}) = sign(\textbf{w}^T\textbf{x}+b) = \sum_{i}\alpha_{i}y_{i}\phi(\textbf{x}_{i}\  \text{and using the kernel trick})$. Note that $\alpha_{i}$ is only non-zero for instances $\phi(\textbf{x}_{i})$ on or near the boundary-those are called the $support vector $ since they alone specify the decision boundary. We can toss out the other data points once training is complete. Thus, we only sum over the $x_{i}$ which constitute the support vectors.
   \end{algorithmic}
 \end{algorithm} 
+
+
+ \begin{algorithm}
+   \caption{Stacking ~\cite{Wolpert92stackedgeneralization
+   } }
+   
+   
+   
+  \begin{algorithmic}[1]
+   \INPUT 
+   \Statex A training set 
+   
+     \OUTPUT{ the final output of the combined learners}
+  
+  \State Split the training set into two disjoint sets
+  
+  \State Train several base learners on the first part
+  
+  \State Test the base learners on the second part.
+  
+  \State Using the predictions from 3) as the inputs, and the correct responses as the outputs, train a higher level learner.
+    
+   
+    \end{algorithmic}
+\end{algorithm} 
       
  \newpage
+
+
 
 
 

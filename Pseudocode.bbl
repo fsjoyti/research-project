@@ -111,4 +111,9 @@ Wang, T., Ren, Z., Ding, Y., Fang, Z., Sun, Z., MacDonald, M.~L., Sweet, R.~A.,
 \newblock Fastggm: An efficient algorithm for the inference of gaussian
   graphical model in biological networks.
 
+\bibitem[Wolpert, 1992]{Wolpert92stackedgeneralization}
+Wolpert, D.~H. (1992).
+\newblock Stacked generalization.
+\newblock {\em Neural Networks}, 5:241--259.
+
 \end{thebibliography}
