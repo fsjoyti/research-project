@@ -453,7 +453,7 @@
   \begin{algorithm}
    \caption{Hierarchial Agglomerative Algorithm ~\cite{haa1} Link:24,54}
     \begin{algorithmic}[1]
-    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{}$
     \Statex $d_c. \text{Distance measure for two clusters}$}
      \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
      \State $C = \{\{v\mid v \in V\}\} $ \Comment{Initial Clustering}
@@ -482,9 +482,9 @@
    \caption{Hierarchial Agglomerative Algorithm 2 ~\cite{hierarchical1} Link:28,54}
     \begin{algorithmic}[1]
     
-    \INPUT{\Statex $\langle{V,E,w}\rangle.\text{Weighted graph}$
+    \INPUT{\Statex N number of Data points
     \Statex $d_c. \text{Distance measure for two clusters}$}
-     \OUTPUT{$\langle{V_T,E_T}\rangle.\text{Cluster hierarchy or dendogram}$}
+     \OUTPUT{$ \text{Cluster hierarchy or dendogram of size N}$}
        
     \While{More than one cluster remains }
        
@@ -878,7 +878,7 @@ similarity).
 
 \begin{algorithm}
  
-   \caption{DBSCAN link:{13,76}  ~\cite{dbscan1
+   \caption{DBSCAN link:{13,76,97}  ~\cite{dbscan1
    }  }
     \begin{algorithmic}[1]
     \INPUT{
