@@ -322,18 +322,18 @@
   \begin{algorithm}
    \caption{Perceptron ~\cite{perceptron1} Link:{65}}
     \begin{algorithmic}[1]
-    \INPUT{$ProblemSize,InputPatterns,iterations_{max},learn_{rate}$}
-     \OUTPUT{$  Weights(\text{Classification of the entire training set})$}
+    \INPUT{ProblemSize,InputPatterns,Max number of iterations,Learning rate}
+     \OUTPUT{ Weights{Classification of the entire training set})}
     
-       \For{$i = 1$ to ${iterations_{max}}$}
-            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
-            \State $Activation_i \leftarrow ActivateNetwork(Pattern_i,Weights)$
-            \State $Output_i \leftarrow TransferActivation(Activation_i)$
-            \State $UpdateWeights(Pattern_i,Output_i,learn_{rate})$
+       \For{$i = 1$ to Max number of iterations}
+            \State $Pattern_i \leftarrow$ SelectInputPattern(InputPatterns)
+            \State $Activation_i \leftarrow$ ActivateNetwork($Pattern_i$,Weights)
+            \State $Output_i \leftarrow$ TransferActivation$(Activation_i)$
+            \State UpdateWeights($Pattern_i,Output_i$,Learning rate )
         \EndFor
         
        
-       \State Return $Weights$
+       \State Return Weights
 
 
 
@@ -346,20 +346,20 @@
   \begin{algorithm}
    \caption{Back-propagation  ~\cite{backpropagation12} Link:17,30,42}
     \begin{algorithmic}[1]
-    \INPUT{$ProblemSize,InputPatterns,iterations_{max},learn_{rate}$}
-     \OUTPUT{$Network$}
-     \State $Network \leftarrow ConstructNetworkLayers()$
-     \State $Network_{weights} \leftarrow InitializeWeights(Network,ProblemSize)$
+    \INPUT{ProblemSize,InputPatterns,Max number of iterations,Learning rate}
+     \OUTPUT{Network}
+     \State Network $\leftarrow$ ConstructNetworkLayers()
+     \State $Network_{weights} \leftarrow$ InitializeWeights(Network,ProblemSize)
     
-       \For{$i = 1$ to ${iterations_{max}}$}
-            \State $Pattern_i \leftarrow SelectInputPattern(InputPatterns)$
-            \State $Output_i \leftarrow ForwardPropagate(Pattern_i,Network)$
-            \State $BackwardPropagateError(Pattern_i,Output_i,Network)$
-            \State $UpdateWeights(Pattern_i,Output_i,Network,learn_{rate})$
+       \For{$i = 1$ to Max number of iterations}
+            \State $Pattern_i \leftarrow$ SelectInputPattern(InputPatterns)
+            \State $Output_i \leftarrow $ ForwardPropagate($Pattern_i$,Network)
+            \State BackwardPropagateError($Pattern_i,Output_i$,Network)
+            \State UpdateWeights($Pattern_i,Output_i$,Network,Learning rate)
         \EndFor
         
        
-       \State Return $Network$
+       \State Return Network
 
 
 
