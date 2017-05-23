@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  14 MAY 2017 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  21 MAY 2017 22:54
 entering extended mode
 **./Pseudocode.tex
 (Pseudocode.tex
@@ -2133,13 +2133,13 @@ LaTeX Info: Redefining \nameref on input line 46.
 \openout4 = `Pseudocode.out'.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 109.
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+put line 121.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2147,15 +2147,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <svm.jpg, id=86, 328.72812pt x 191.21437pt>
 File: svm.jpg Graphic file (type jpg)
  <use svm.jpg>
-Package pdftex.def Info: svm.jpg used on input line 1051.
+Package pdftex.def Info: svm.jpg used on input line 1063.
 (pdftex.def)             Requested size: 473.69687pt x 275.54396pt.
 
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 1051--1052
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 1063--1064
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 5.6924pt on input line 1092.
+LaTeX Warning: Float too large for page by 5.6924pt on input line 1104.
 
 [1
 
@@ -2165,9 +2165,9 @@ ext4): destination with the same identifier (name{algorithm.28}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1158 \end{algorithm}
+l.1170 \end{algorithm}
                       
-Underfull \hbox (badness 1917) in paragraph at lines 1179--1185
+Underfull \hbox (badness 1917) in paragraph at lines 1191--1197
  [][] \OT1/cmr/m/n/10 Be-cause we're work-ing in a higher-dimension space(and p
 o-ten-tially even an infinite-dimensional
  []
@@ -2176,25 +2176,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{algorithm.28}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1191 \end{algorithm}
+l.1203 \end{algorithm}
                        (Pseudocode.bbl) [14
 
 ] [15] [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1228.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1284.
  (Pseudocode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1228.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1284.
 
 Package rerunfilecheck Info: File `Pseudocode.out' has not changed.
 (rerunfilecheck)             Checksum: 52A397F39472645207BCB2DC9B4451A4;382.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1228.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1284.
  ) 
 Here is how much of TeX's memory you used:
- 26970 strings out of 493333
- 507381 string characters out of 3139182
- 667465 words of memory out of 3000000
- 29995 multiletter control sequences out of 15000+200000
+ 26977 strings out of 493333
+ 507450 string characters out of 3139182
+ 668683 words of memory out of 3000000
+ 29996 multiletter control sequences out of 15000+200000
  8321 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,66p,10388b,733s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2216,9 +2216,9 @@ ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pseudocode.pdf (16 pages, 345318 bytes).
+Output written on Pseudocode.pdf (16 pages, 347097 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

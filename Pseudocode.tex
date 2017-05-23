@@ -56,7 +56,8 @@
 	\item C4.5 (Algorithm 16)
 	\item Naive Bayes Multinomial Model (Algorithm 18)
 	\item  Random Forest (Algorithm 5)
-	\item Logistic Regression (Algorithm 26)
+	\item Winnow Algorithm(Algorithm 30)
+	
 	\end{enumerate}
  
 
@@ -82,7 +83,7 @@
 \item Regression Algorithms
 \begin{enumerate}
    \item Lasso Regression (Algorithm 19)
- 
+ \item Logistic Regression (Algorithm 26)
 \end{enumerate}
 
 \item Deep Learning Algorithms
@@ -90,15 +91,26 @@
    \item Deep Q-Learning (Algorithm 21)
 \end{enumerate}
 
+\item Ensemble Learning
+\begin{enumerate}
+   \item Adaboost (Algorithm 2, 3, 4)
+    \item Bagging (Algorithm 20)
+   \item Stacking  (Algorithm 29)
+   
+\end{enumerate}
 
+\item Dimensionality Reduction Algorithms
+\begin{enumerate}
+\item Principal Components Analysis(Algorithm 25)
+
+\end{enumerate}
 \item Other Methods
 \begin{enumerate}
    \item Gradient Descent (Algorithm 17)
-   \item Adaboost (Algorithm 2, 3, 4)
-   \item Gaussian (Algorithm 22)
-   \item Principal Components Analysis(Algorithm 25)
-   \item Bagging (Algorithm 20)
-   \item Stacking  (Algorithm 29)
+   \item PageRank(Algorithm 22)
+   \item Gaussian Process(Algorithm 27)
+  
+   
 \end{enumerate}
 
 \end{enumerate}
@@ -1215,6 +1227,50 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
     \end{algorithmic}
 \end{algorithm} 
       
+      
+      \begin{algorithm}
+   \caption{Winnow ~\cite{winnowalgo1
+   }
+    }
+   
+   
+   
+  \begin{algorithmic}[1]
+   \INPUT 
+   \Statex A training set
+   \Statex $d$ : The Number of attributes
+   
+     \OUTPUT{Weights(Classification of the entire training set)}
+  
+  \State $\theta \leftarrow \frac{d}{2}$
+  \State $w \leftarrow (1,1,....1)$
+  
+  \For{$ i = 1,2, ....$}
+  
+  \If {$w^{T}x^{(i)} > \theta $}
+   \State $c_{*}(x^{(i)}) = 1$
+   \Else
+    \State $c_{*}(x^{(i)}) = 0$
+  \EndIf
+  
+   \If {$c_{*}(x^{(i)}) \neq c(x^{(i)})  $}
+  \State $\forall : x_{j}^{(i)} = 1 , w_{j} \leftarrow 2w_{j} $
+   \Else
+    \State $\forall : x_{j}^{(i)} = 1 , w_{j} \leftarrow 0 $
+  
+   
+   
+  \EndIf
+  
+  
+  
+  \EndFor
+  
+
+    
+   
+    \end{algorithmic}
+\end{algorithm} 
  \newpage
 
 
