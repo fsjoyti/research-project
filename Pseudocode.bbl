@@ -77,6 +77,11 @@ Gavrilov, Z. (.).
 Hertzmann, A., Fleet, D., and Brubaker, M. (2015).
 \newblock Adaboost.
 
+\bibitem[Jurafsky and Martin, 2008]{jurafsky_martin_2008}
+Jurafsky, D. and Martin, J.~H. (2008).
+\newblock {\em Hidden Markov Models}.
+\newblock Prentice Hall, 2nd edition.
+
 \bibitem[Mnih et~al., 2013]{DBLP:journals/corr/MnihKSGAWR13}
 Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra,
   D., and Riedmiller, M.~A. (2013).

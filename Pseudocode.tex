@@ -1271,6 +1271,110 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
    
     \end{algorithmic}
 \end{algorithm} 
+
+\begin{algorithm}
+   \caption{Hidden Markov Models - The forward algorithm ~\cite{ jurafsky_martin_2008} }
+ \begin{algorithmic}[1]
+  \INPUT 
+   \Statex  observations of length $T$, state-graph of length $N$
+   
+    \OUTPUT{forward-probability}
+    
+    \State create a probability matrix $forward[N+2,T]$
+    
+     \For{$ \text{state s from} \  1 \  to \ N $}
+   \State $forward[s,1] \leftarrow a_{o,s} \times b_{s}(o_{1})$
+   
+   \EndFor
+   
+     \For{$ \text{time step t from } \  2 \  to \ T $}
+       \For{$ \text{state s from} \  1 \  to \ N $}
+   \State $forward[s,t] \leftarrow  \sum_{s'=1}^N forward[s,1] \times a_{s',s} \times b_{s} (o_{t}) $
+   
+   \EndFor
+   
+   \EndFor
+   
+  \State $forward[q_{F},T]  \leftarrow \sum_{s=1}^N forward[s,t] \times a_{s,qF}   $
+  \State  return $forward[q_{F},T]$
+    \end{algorithmic}
+
+\end{algorithm}
+
+\begin{algorithm}
+   \caption{ Hidden Markov Models - The Viterbi algorithm ~\cite{ jurafsky_martin_2008}
+    }
+   
+   
+  \begin{algorithmic}[1]
+  
+   \INPUT 
+   \Statex  observations of length $T$, state-graph of length $N$
+   
+     \OUTPUT{best-path}
+     
+     \State create a path probability matrix $viterbi[N+2,T]$
+      \State create a path probability matrix $backpointer[N+2,T]$
+  
+    \For{$ \text{state s from} \  1 \  to \ N $}
+   \State $viterbi[s,1] \leftarrow a_{o,s} \times b_{s}(o_{1})$
+   \State $backpointer[s,1] \leftarrow 0$
+   
+   
+   \EndFor
+   
+    \For{$ \text{time step t from } \  2 \  to \ T $}
+       \For{$ \text{state s from} \  1 \  to \ N $}
+   \State $viterbi[s,t] \leftarrow  max_{s'=1}^N viterbi[s',1] \times a_{s',s} \times b_{s} (o_{t}) $
+   \State $backpointer[s,t] \leftarrow argmax_{s'=1}^N \ viterbi[s',1] \times a_{s',s} $
+   
+   \EndFor
+   
+   \EndFor
+   
+    \State $viterbi[q_{F},T]  \leftarrow  max_{s=1}^N viterbi[s,t] \times a_{s,qF}   $
+    
+   \State $backpointer[q_{F},T] \leftarrow argmax_{s=1}^N \ viterbi[s,1] \times a_{s,qF} $
+   
+   \State  return $\text{the backtrace path by following backpointers to states back in time from } \ backpointer[q_{F},T]$
+  
+    \end{algorithmic}
+
+\end{algorithm}
+
+\begin{algorithm}
+   \caption{ Hidden Markov Models - The Viterbi algorithm ~\cite{ jurafsky_martin_2008}
+    }
+   
+   
+  \begin{algorithmic}[1]
+  
+   \INPUT
+   \Statex observations of len $T$
+   \Statex output vocabulary $V$
+   \Statex hidden state set $Q$
+   
+   \OUTPUT
+   \Statex The forward and backward probabilities A and B
+   
+   \State $\textbf{initialize}$ \ A and B
+   \State $\textbf{iterate}$ \ until convergence
+   $\textbf{E-step}$
+   \State $\gamma_{t}(j) = \frac{\alpha_{t}(j) \beta_{t}(j)}{\alpha_{t}(q_{F})} \   \forall \  \text{t and j}$
+   \State $\xi_{t}(i,j) = \frac{\alpha_{t}(i)a_{ij}b_{j}(o_{t+1}) \beta_{t+1}(j)}{\alpha_{T}(N)} \   \forall \  \text{t, i, and j}$
+   $\textbf{M-step}$
+   \State $\overset{\wedge}{\alpha_{ij}} = \frac{ \operatorname*{\sum}_{t=1}^{|T-1|} \xi_{t}(i,j)}{\operatorname*{\sum}_{t=1}^{|T-1|} \operatorname*{\sum}_{j=1}^{N} \epsilon_{t}(i,j) } $
+   
+   \State $\overset{\wedge}{\beta_{j}(v_{k})} = \frac{\operatorname*{\sum}_{t=1s.t. O_{t} = v_{k}}^{|T|} \gamma_{t} (j) }{\operatorname*{\sum}_{t=1}^{T} \gamma_{t}(j)}$
+  
+  \State return A,B
+
+ \end{algorithmic}
+
+\end{algorithm}
+
+
+
  \newpage
 
 
