@@ -65,10 +65,10 @@
 	
 \item Neural Networks
 \begin{enumerate}
-	\item Perceptron (Algorithm 7)
-	\item Back-Propagation (Algorithm 8) 
-	\item Learning Vector Quantization (Algorithm 10)
-	\item Self Organizing Map (Algorithm 11)
+	\item Perceptron (Algorithm 7,8)
+	\item Back-Propagation (Algorithm 9,10) 
+	\item Learning Vector Quantization (Algorithm 11)
+	\item Self Organizing Map (Algorithm 12,13)
 	
 	
 \end{enumerate}	
@@ -294,7 +294,7 @@
 
 
   \begin{algorithm}
-   \caption{Iterative Dichotomiser 3 ~\cite{id3algo1} Link:{14,61}}
+   \caption{Iterative Dichotomiser 3 ~\cite{id3algo1} Link:{12,14,56,74,131,140}}
     \begin{algorithmic}[1]
     \INPUT{$D:\text{Training Data}, \ X: \text{Set of Input  Attributes} $}
      \OUTPUT{A decision tree}
@@ -349,6 +349,42 @@
 
  
 
+\end{algorithmic}
+\end{algorithm}
+
+ \begin{algorithm}
+   \caption{Perceptron  ~\cite{perceptron2} Link:{65}}
+   
+    \begin{algorithmic}[1]
+    
+    \INPUT {
+    \Statex Training set S = (($x_1,y_1$),....($x_m,y_m$))
+    \Statex Learning rate $\eta > 0 $
+    \Statex Maximum number of iterations $T$
+    }
+    
+    \OUTPUT{Parameters of the linear model $w^{(t)}$}
+    
+    \Statex Initialize weights $w^{(0)} = (\overset{\mathunderscore} {w}^{(0)},w_{0}^{(0)})$
+    \Statex $t \leftarrow 0 $
+    \While{$t \leq T $}
+    \State Choose an example at random $(x,y)\in S$
+    \If{ $y \times (\langle \overset{\mathunderscore} {w}^{(t)},x \rangle + w_{0} ^{(t)}) \leq 0 $}
+    
+   \State $w_{0}^{(t+1)} \leftarrow w_{0}^{(t)} + \eta \times y  $
+   \State $\overset{\mathunderscore} {w}^{(t+1)} \leftarrow \overset{\mathunderscore} {w}^{(t)} + \eta \times y \times x  $
+   \Else
+    \State $w^{(t+1)} \leftarrow w^{(t)}$
+    
+    \EndIf
+    
+  
+    
+    \EndWhile
+    
+    \State t $\leftarrow $ t +1 
+   
+   
 \end{algorithmic}
 \end{algorithm}
 
@@ -437,7 +473,7 @@
 
 
   \begin{algorithm}
-   \caption{Self Organizing Map ~\cite{som3} Link:45 }
+   \caption{Self Organizing Map ~\cite{som3} Link:69 }
     \begin{algorithmic}[1]
     \INPUT{InputPatterns,Max number of iterations,Learning rate,$Grid_{width},Grid_{height}$}
      \OUTPUT{CodebookVectors}
@@ -470,6 +506,46 @@
 
 \end{algorithmic}
 \end{algorithm}
+
+\begin{algorithm}
+   \caption{Self Organizing Map ~\cite{som2} Link:69 }
+    \begin{algorithmic}[1]
+    
+    \INPUT{
+    \Statex Training data: Vectors of length $n$ \\
+   ($x_{1,1},x_{1,2},.....x_{1,n}$) \\
+   ....\\
+   ....\\
+   ($x_{p,1},x_{p,2},.....x_{p,n}$)
+   \Comment{p distinct training vectors}
+    }
+    
+    \OUTPUT{
+    \Statex A vector Y of length $m$ :($y_{1},y_{2},....y_{m}$) \\
+    \Comment{ Sometimes $m < n$ , sometimes $m > n$ , sometimes $m = n$}
+    }
+    \State Select output layer network topology
+    \Comment{Initialize current neighborhood distance,$D(0)$, to a positive value}
+    \State Initialize weights from inputs to outputs to small random values
+    \State Let $t = 1$
+    \While{computational bounds are not exceeded}
+    \State Select an input sample $i_{l}$
+    \State Compute the square of the Euclidean distance of $i_{l}$ \\
+    from weight vectors($w_{j}$) associated with each output node
+    $$\operatorname*{\sum}_{k=1}^{n} ((i_{l,k} - w_{j,k} (t)))^{2}$$
+    \State Select output node $j^{*}$ that has weight vector with minimum value from step 2)
+    \State Update weights to all nodes within a topological distance given by $D(t)$ from $j^{*}$ using the weight update rule:
+    $w_{j}(t+1) = w_{j}(t) + \eta (t) (i_{l} - w_{j} (t))$
+    \State increment $t$
+    
+    
+    \EndWhile
+    
+    
+    
+    \end{algorithmic}
+\end{algorithm}
+    
 
 
   \begin{algorithm}
@@ -1215,7 +1291,7 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
 
  \begin{algorithm}
    \caption{Stacking ~\cite{Wolpert92stackedgeneralization
-   } }
+   } link : 95,104}
    
    
    
@@ -1240,7 +1316,7 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
       
       \begin{algorithm}
    \caption{Winnow ~\cite{winnowalgo1
-   }
+   } Link :96,97,153
     }
    
    

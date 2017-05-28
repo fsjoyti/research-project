@@ -24,6 +24,10 @@
 . (.f).
 \newblock Page rank.
 
+\bibitem[., g]{som2}
+. (.g).
+\newblock Self-organizing maps.
+
 \bibitem[., 2014]{pca1}
 . (2014).
 \newblock Principal component analysis.
@@ -44,6 +48,10 @@
 . (2017).
 \newblock Introduction to machine learning - online learning and mistake
   bounds.
+
+\bibitem[Amini, 2015]{perceptron2}
+Amini, M. (2015).
+\newblock Perceptron.
 
 \bibitem[Bernstein, 2016]{randomforest1}
 Bernstein, M. (2016).

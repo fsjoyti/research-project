@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  25 MAY 2017 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  28 MAY 2017 12:50
 entering extended mode
 **./Pseudocode.tex
 (Pseudocode.tex
@@ -2144,63 +2144,63 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 133.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<svm.jpg, id=86, 328.72812pt x 191.21437pt>
+<svm.jpg, id=90, 328.72812pt x 191.21437pt>
 File: svm.jpg Graphic file (type jpg)
  <use svm.jpg>
-Package pdftex.def Info: svm.jpg used on input line 1073.
+Package pdftex.def Info: svm.jpg used on input line 1149.
 (pdftex.def)             Requested size: 473.69687pt x 275.54396pt.
 
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 1073--1074
+Overfull \hbox (20.00003pt too wide) in paragraph at lines 1149--1150
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 5.6924pt on input line 1114.
+LaTeX Warning: Float too large for page by 5.6924pt on input line 1190.
 
 [1
 
 {C:/Users/Anastasia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13 <./svm.jpg>]pdfTeX warning (
-ext4): destination with the same identifier (name{algorithm.28}) has been alrea
-dy used, duplicate ignored
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14 <./svm.jpg>]pdfTeX warn
+ing (ext4): destination with the same identifier (name{algorithm.30}) has been 
+already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1180 \end{algorithm}
+l.1256 \end{algorithm}
                       
-Underfull \hbox (badness 1917) in paragraph at lines 1201--1207
+Underfull \hbox (badness 1917) in paragraph at lines 1277--1283
  [][] \OT1/cmr/m/n/10 Be-cause we're work-ing in a higher-dimension space(and p
 o-ten-tially even an infinite-dimensional
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{algorithm.28}
+pdfTeX warning (ext4): destination with the same identifier (name{algorithm.30}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1213 \end{algorithm}
+l.1289 \end{algorithm}
                       
-Underfull \hbox (badness 3281) in paragraph at lines 1286--1286
-[]\OT1/cmr/bx/n/10 Algorithm 31 \OT1/cmr/m/n/10 Hid-den Markov Mod-els - The fo
+Underfull \hbox (badness 3281) in paragraph at lines 1362--1362
+[]\OT1/cmr/bx/n/10 Algorithm 33 \OT1/cmr/m/n/10 Hid-den Markov Mod-els - The fo
 r-ward al-go-rithm  [[][]Ju-raf-sky and Mar-tin, 2008[][]]
  []
 
-(Pseudocode.bbl) [14
+(Pseudocode.bbl) [15
 
-] [15] [16] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1398.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1398.
+] [16] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1474.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1474.
  (Pseudocode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1398.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1398.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1474.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1474.
 
 Package rerunfilecheck Info: File `Pseudocode.out' has not changed.
 (rerunfilecheck)             Checksum: 52A397F39472645207BCB2DC9B4451A4;382.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1398.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1474.
  ) 
 Here is how much of TeX's memory you used:
- 26987 strings out of 493333
- 507568 string characters out of 3139182
- 669025 words of memory out of 3000000
- 29997 multiletter control sequences out of 15000+200000
+ 26995 strings out of 493333
+ 507655 string characters out of 3139182
+ 677946 words of memory out of 3000000
+ 30000 multiletter control sequences out of 15000+200000
  8321 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,66p,10388b,733s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2222,9 +2222,9 @@ ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pseudocode.pdf (17 pages, 357141 bytes).
+Output written on Pseudocode.pdf (18 pages, 361790 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
