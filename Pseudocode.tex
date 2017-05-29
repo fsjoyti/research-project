@@ -88,6 +88,7 @@
    \item Hierarchial Agglomerative Clustering (Algorithm 12 and Algorithm 13)
     \item Hierarchial Divisive Clustering (Algorithm 14 and Algorithm 15)
     \item DBSCAN (Algorithm 24)
+    \item K medoids(Algorithm 27)
 \end{enumerate}
 
 \item Regression Algorithms
@@ -657,7 +658,7 @@ similarity).
 
  \begin{algorithm}
  
-   \caption{C4.5  ~\cite{c4.5} Link :22,55 }
+   \caption{C4.5  ~\cite{c4.5} Link :18,63,80,107,109,110,111,129 }
     \begin{algorithmic}[1]
     \INPUT{
     \Statex $T : \text{Training dataset} $
@@ -973,6 +974,62 @@ similarity).
  
  \end{algorithmic}
 \end{algorithm}
+
+\begin{algorithm}
+ \caption{K means ~\cite{kmeans2} Link:25,29,40,104   }
+    \begin{algorithmic}[1]
+    
+    \INPUT{
+    \Statex $k \  \text{the number of centers}$
+    \Statex $X \  \text{the} \  n  \ \text{data points}  \ \text{in}\  d \  \text{dimensions}$
+    \Statex initial location of the centers $C = \{c_{j}\}$
+    }
+    
+    \OUTPUT{$C \ \text{The final clusters}$}
+    
+    \While{the any $c_{j}$ change location }
+    \For{$i \in \{1...n\}$ }
+    \State $class(x_{i}) \leftarrow arg\  min_{j} || x_{i} - c_{j} ||$
+    \EndFor
+    
+    \For{$j \in \{1...k\}$}
+    $c_{j} \leftarrow \frac{\sum_{i} I(class(x_{i}) = j) x_{i}} {\sum_{i} I(class(x_{i}) = j)}$
+      \EndFor
+    
+    \EndWhile
+    
+    \State return $C$
+
+ \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+ \caption{K medoids ~\cite{kmeans2}}
+    \begin{algorithmic}[1]
+   \INPUT{
+   \Statex $D$ (Pairwise distance matrix which describe the pairwise distances for the  datapoints being clustered)
+   \Statex $n \times n $ matrix of distances between all pairs of datapoints
+   \Statex the number of medoids desired $k$
+   \Statex $M \ \text{The initial  medoids}$ 
+      } 
+      
+      \OUTPUT{$M \ \text{The final clusters}$ }
+      
+      \While{any medoids $m_{j}$ changes }
+      \For{$i \in \{1...n\}$}
+      $class(x_{i}) \leftarrow arg\  min_{j}D_{ij}$
+      \EndFor
+      
+      \For{$j \in \{1...|M|\}$}
+      $m_{j} \leftarrow arg\  min_{i}I(class(i) = j)D_{ij}$
+      \EndFor
+      
+      \EndWhile
+    
+    
+\end{algorithmic}
+\end{algorithm}
+
 
 \begin{algorithm}
  

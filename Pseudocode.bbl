@@ -81,6 +81,10 @@ Dai, W. and Ji, W. (2014).
 Gavrilov, Z. (.).
 \newblock Support vector machines.
 
+\bibitem[Hamerly, ]{kmeans2}
+Hamerly, G.~J. (.).
+\newblock Learning structure and concepts in data through data clustering.
+
 \bibitem[Hertzmann et~al., 2015]{adaboostsecond}
 Hertzmann, A., Fleet, D., and Brubaker, M. (2015).
 \newblock Adaboost.
