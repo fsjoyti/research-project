@@ -110,6 +110,11 @@ Ram, A., Jalal, S., Jalal, A.~S., and Kumar, M. (2010).
   large spatial databases.
 \newblock {\em International Journal of Computer Applications}, 3(6):1–4.
 
+\bibitem[Russell and Norvig, 2016]{russell_norvig_2016}
+Russell, S.~J. and Norvig, P. (2016).
+\newblock {\em Artificial intelligence: a modern approach}.
+\newblock Pearson, 3rd edition.
+
 \bibitem[Schapire, 2014]{adaboostfirst}
 Schapire, R. (2014).
 \newblock Machine learning algorithms for classification.

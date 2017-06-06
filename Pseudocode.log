@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  30 MAY 2017 10:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.11)  6 JUN 2017 09:26
 entering extended mode
 **./Pseudocode.tex
 (Pseudocode.tex
@@ -2186,21 +2186,22 @@ r-ward al-go-rithm  [[][]Ju-raf-sky and Mar-tin, 2008[][]]
 (Pseudocode.bbl) [15
 
 ] [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1532.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1532.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1578.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1578.
  (Pseudocode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1532.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1532.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1578.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1578.
 
 Package rerunfilecheck Info: File `Pseudocode.out' has not changed.
 (rerunfilecheck)             Checksum: 52A397F39472645207BCB2DC9B4451A4;382.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1532.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1578.
  ) 
 Here is how much of TeX's memory you used:
- 27001 strings out of 493333
- 507714 string characters out of 3139182
- 684355 words of memory out of 3000000
- 30001 multiletter control sequences out of 15000+200000
+ 27007 strings out of 493333
+ 507814 string characters out of 3139182
+ 684447 words of memory out of 3000000
+ 30004 multiletter control sequences out of 15000+200000
  8321 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,66p,10388b,733s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2222,9 +2223,9 @@ ic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pseudocode.pdf (18 pages, 364135 bytes).
+Output written on Pseudocode.pdf (19 pages, 368932 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 152 named destinations out of 1000 (max. 500000)
+ 432 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

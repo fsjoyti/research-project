@@ -51,7 +51,7 @@
 \item Classification 
 	\begin{enumerate}
 	\item  K-Nearest Neighbor (Algorithm 1)
-	\item Support Vector Machines (Algorithm 28)
+	\item Support Vector Machines (Algorithm 32)
 	\item Iterative Dichotomiser 3 (Algorithm 6)
 	\item C4.5 (Algorithm 16)
 	\item Naive Bayes Multinomial Model (Algorithm 18)
@@ -858,7 +858,7 @@ similarity).
     \begin{algorithmic}[1]
     \INPUT{ \Statex D: data set
     \Statex Q: Action-Value Function}
-     \OUTPUT{New Training Sets}
+     \OUTPUT{Actions that maximize the total reward}
      
        \For{$i = 1$ to ${M}$}
             \State Initialise sequence $s_{1} = \{x_{1}\}$ and preprocessed sequenced $\phi = \phi(s_1)$
@@ -1018,7 +1018,7 @@ similarity).
       
       \While{any medoids $m_{j}$ changes }
       \For{$i \in \{1...n\}$}
-      $class(x_{i}) \leftarrow arg\  min_{j}D_{ij}$
+   \State   $class(x_{i}) \leftarrow arg\  min_{j}D_{ij}$
       \EndFor
       
       \For{$j \in \{1...|M|\}$}
@@ -1516,6 +1516,52 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
  \end{algorithmic}
 
 \end{algorithm}
+
+\begin{algorithm}
+    \caption{Genetic Algorithm ~\cite{russell_norvig_2016
+   } link :38,39,141 }
+   
+   
+  \begin{algorithmic}[1]
+   \INPUT 
+   \Statex $population$ , a set of individuals
+   \Statex Fitness-FN, a function that measures the fitness of an individual
+   
+     \OUTPUT{ the best-individual in population, according to FITNESS-FN}
+   \Function{Genetic Algorithm}{$population$, FITNESS-FN}\
+   \While{some individual is not fit enough or enough time has not elapsed}
+\State   $new \mathunderscore population \leftarrow $ empty set
+\For{$i = 1 \ \text{ to SIZE}(population)$}
+\State $x \leftarrow $ RANDOM-SELECTION ($population$,FITNESS-FN)
+\State $y \leftarrow $ RANDOM-SELECTION ($population$,FITNESS-FN)
+\State $child \leftarrow$ REPRODUCE($x,y$)
+\If{small random propbability}
+\State $child \leftarrow $ MUTATE($child$)
+\State add child to $new \mathunderscore population$ 
+
+\EndIf
+
+\State $population \leftarrow  new \mathunderscore population $
+\EndFor
+\State return the best individual in $population$ , according to FITNESS-FN
+
+\Function{REPRODUCE}{$x, y $}\
+\State $n \leftarrow \text{LENGTH} $
+\State $c \leftarrow $ random number from $1\   \text{to} \ n$
+\State APPEND(SUBSTRING($x,1,c$),SUBSTRING($y,c+1,n$))
+
+\EndFunction
+
+
+\EndWhile
+ 
+ 
+  \EndFunction  
+   
+    \end{algorithmic}
+\end{algorithm} 
+      
+
 
 
 
