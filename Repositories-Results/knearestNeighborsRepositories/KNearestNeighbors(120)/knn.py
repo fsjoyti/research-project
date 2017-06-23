@@ -150,25 +150,25 @@ if len(sys.argv) > 3:
 
 #Iris Data
 #Open test data with CSV reader
-with open('Iris_Test.csv', "rt") as iris_test_data:
+with open('pendigits_test.csv', "rt") as iris_test_data:
 	iris_test = csv.reader(iris_test_data)
 	iris_test = list(iris_test)
 
-	with open('Iris_Test.csv', "rt") as panda_iris_test_data:
+	with open('pendigits_test.csv', "rt") as panda_iris_test_data:
 		#Open test data with pandas library to provide ability to read entire columns at a time
 		panda_iris_test = pandas.read_csv(panda_iris_test_data)
 
 		#Open training data with CSV reader
-		with open('Iris.csv', "rt") as iris_train_data:
+		with open('pendigits.csv', "rt") as iris_train_data:
 			iris_train = csv.reader(iris_train_data)
 			iris_train = list(iris_train)
 
-			with open('Iris.csv', "rt") as panda_iris_train_data:
+			with open('pendigits.csv', "rt") as panda_iris_train_data:
 				#Open training data with pandas library to provide ability to read entire columns at a time
 				panda_iris_train = pandas.read_csv(panda_iris_train_data)
 
 				#Create (or overwrite) CSV file to hold output
-				with open('iris_out.csv',"w") as output_file:
+				with open('pendigits_out.csv',"w") as output_file:
 					output = csv.writer(output_file, dialect='excel')
 
 					#Create header row for output CSV file
@@ -176,9 +176,9 @@ with open('Iris_Test.csv', "rt") as iris_test_data:
 
 					#Create pandas dataframes for each column in test Iris data
 					test_sepal_length = panda_iris_test.sepal_length
-					test_sepal_width = panda_iris_test.sepal_width
-					test_petal_length = panda_iris_test.petal_length
-					test_petal_width = panda_iris_test.petal_width
+					#test_sepal_width = panda_iris_test.sepal_width
+					#test_petal_length = panda_iris_test.petal_length
+					#test_petal_width = panda_iris_test.petal_width
 
 					#Create pandas dataframes for each column in training Iris data
 					train_sepal_length = panda_iris_train.sepal_length

@@ -1,4 +1,3 @@
-"ID","age","workclass","fnlwgt","education","education_cat","marital_status","occupation","relationship","race","gender","capital_gain","capital_loss","hour_per_week","native_country","class"
 "2905",31," Private",59083," Some-college",10," Married-civ-spouse"," Other-service"," Husband"," White"," Male",0,1672,50," United-States"," <=50K"
 "6846",58," Private",213975," Assoc-voc",11," Widowed"," Prof-specialty"," Not-in-family"," White"," Female",0,0,40," United-States"," <=50K"
 "23873",57," State-gov",183657," Some-college",10," Married-civ-spouse"," Prof-specialty"," Husband"," Black"," Male",0,0,35," United-States"," >50K"

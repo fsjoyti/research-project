@@ -1561,7 +1561,90 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
    
     \end{algorithmic}
 \end{algorithm} 
-      
+
+
+\begin{algorithm}
+   \caption{SMO Algorithm ~\cite{.
+   } }
+   
+   
+   
+  \begin{algorithmic}[1]
+    \INPUT {
+    \Statex $C$: regularization parameter
+    \Statex $tol$: numerical tolerence
+    \Statex $max \mathunderscore passes$:max \# of times to iterate over $\alpha$'s without changing 
+    \Statex ($x^{(1)},y^{(1)},.....,x^{(m)},y^{(m)}$)}
+    
+   \OUTPUT{
+   \Statex $\alpha \in \mathbb{R}^{m} $ : Lagrange multipliers for solution
+   \Statex $b \in \mathbb{R}$ : threshold for solution
+   }
+   \State Initialize $\alpha_{i} = 0, \forall i ,b = 0$
+   \State Initialize $passes = 0$ 
+  \While {$passes < max \mathunderscore passes $}
+  \State $num \mathunderscore changed \mathunderscore alphas = 0$
+  \For{$i = 1,... m$}
+  \State Calculate $E_{i} = f(x^(i)) - y^{(i)}$ using (2).
+  \If {(($y^{(i)}E_{i} < -tol \  \& \& \alpha_{i} < C  \| y ^ {(i)}E_{i}> tol \  \& \& \  \alpha_{i} > 0 $ ))}
+  \State Select $j \neq i$  randomly
+  \State Calculate $E_{j} = f(x^{(j)}) - y^{(j)} using (2)$
+  \State Save old $\alpha$'s $\alpha_{i}^{(old)} = \alpha_{i} , \alpha_{j}^{(old)} = \alpha_{j}  $
+  \State Compute $L \ \text{and} \ H \  by $ 
+  \State $ L = max(0,\alpha_{j} - \alpha_{i}), H = min(C, C + \alpha_{j} - \alpha_{i} \  \text{if} \  y^{(i)} \neq  y^{(j)})  $
+  or 
+  \State $  L = max(0,\alpha_{i} + \alpha_{j} - C), H = min(C,  \alpha_{i} + \alpha_{j} \  \text{if} \  y^{(i)} =  y^{(j)}) $
+  
+   \If {$L == H$}
+  \State  $\textbf{continue}$  to next $i$.
+   \EndIf
+   
+   \If{$ \eta \geq 0$}
+   \State  $\textbf{continue}$  to next $i$.
+   \EndIf
+   \State Compute and clip new value for $\alpha_{j}$ using 
+   \State $\alpha_{j} \coloneqq - \frac{y^{(j)} (E_{i} - E_{j} )}{\eta} $
+   and 
+   \State    \begin{numcases}{ \alpha_{j} \coloneqq }
+  H, & if $ alpha_{j} > H  $\\
+ \alpha_{j} , &  if $ L \leq \alpha_{j} \leq  H  $\\
+  L, &  if $ \alpha_{j} < L  $
+\end{numcases}
+
+\If{$ \lvert \alpha_{j} - \alpha_{j}^{(old)} \rvert < 10^{-5} $ }
+$\textbf{continue}$ to next $i$
+ \EndIf
+ 
+ \State Determine value for $\alpha_{i}$ using $$ \alpha_{i} \coloneqq \alpha_{i} + y^{(i)} y^{(j)} (\alpha_{j}^{(old)} - \alpha_{j} ) $$
+ \State Compute $b_{1}$ and $b_{2}$ using 
+ $$b_{1} = b - E_{i} - y^{(i)} (\alpha_{i} - \alpha_{i}^{(old)} \langle  x^{(i)} , x^{(i)} \rangle - y^{(j)} (\alpha_{j} - \alpha_{j}^{(old)} ) \langle x^{(i)} , x^{(j)} \rangle $$
+ \State $$b_{2} = b - E_{j} - y^{(i)} (\alpha_{i} - \alpha_{i}^{(old)} \langle  x^{(i)} , x^{(j)} \rangle - y^{(j)} (\alpha_{j} - \alpha_{j}^{(old)} ) \langle x^{(j)} , x^{(j)} \rangle $$
+ \State Compute $b$ by 
+  \State    \begin{numcases}{ b \coloneqq }
+  b_{1}, & if $ 0 < \alpha_{i} < C  $\\
+ b_{2} , &  if $ 0 < \alpha_{i} < C   $\\
+ \frac{b_{1}+ b_{2} }{2} , &  otherwise
+\end{numcases}
+\State $num \mathunderscore changed \mathunderscore alphas \coloneqq num \mathunderscore changed \mathunderscore alphas + 1  $
+ 
+\begin{sloppypar}
+\If{$num \mathunderscore changed \mathunderscore alphas == 0$}
+$passes \coloneqq passes + 1 $
+
+\Else
+
+ $passes \coloneqq 0 $
+\EndIf
+\end{sloppypar}
+
+  \EndIf
+  
+  \EndFor
+ \EndWhile 
+  
+  
+   \end{algorithmic}
+\end{algorithm} 
 
 
 
