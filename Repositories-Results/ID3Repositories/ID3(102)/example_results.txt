@@ -1,0 +1,14 @@
+entry1 = 1
+entry2 = 1
+entry3 = 0
+entry4 = 0
+entry5 = 0
+entry6 = 1
+entry7 = 0
+entry8 = 1
+entry9 = 0
+entry10 = 0
+entry11 = 0
+entry12 = 0
+entry13 = 0
+entry14 = 1

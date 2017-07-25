@@ -1,0 +1,19 @@
+/home/fsjoyti/LogisticRegression/LogisticRegression.py:162: RuntimeWarning: overflow encountered in exp
+  g = 1/(1+np.exp(-data))
+/home/fsjoyti/LogisticRegression/LogisticRegression.py:198: RuntimeWarning: divide by zero encountered in log
+  J = (-1.0/ m) * ( np.sum( np.log(self.sigmoidCalc( np.dot(data, init_theta))) * labels + ( np.log ( 1 - self.sigmoidCalc(np.dot(data, init_theta)) ) * ( 1 - labels ) )))
+/home/fsjoyti/LogisticRegression/LogisticRegression.py:198: RuntimeWarning: invalid value encountered in multiply
+  J = (-1.0/ m) * ( np.sum( np.log(self.sigmoidCalc( np.dot(data, init_theta))) * labels + ( np.log ( 1 - self.sigmoidCalc(np.dot(data, init_theta)) ) * ( 1 - labels ) )))
+Number of classes 2
+learntParameters(one per class):  [array([[-5.8730731],
+       [-15.065784],
+       [-4.9362658],
+       [-5.6245606],
+       [-5.815278],
+       [-10.732906],
+       [ 16135.849],
+       [-10.138056],
+       [-4.9951251],
+       [-5.4598811]], dtype=float128)]
+final_costs:  [nan]
+Accuracy on training data:  63.5193133047 %

@@ -1,0 +1,6 @@
+entry1 = 0
+entry2 = 1
+entry3 = 1
+entry4 = 0
+entry5 = 1
+entry6 = 0

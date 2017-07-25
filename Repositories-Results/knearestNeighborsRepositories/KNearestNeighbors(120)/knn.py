@@ -3,6 +3,7 @@ import csv
 import pandas
 import numpy
 import math
+import time
 
 #Proximity Functions
 #NOTE: Euclidean distance is a measure of dissimilarity

@@ -1,0 +1,8 @@
+entry1 = democrat
+entry2 = democrat
+entry3 = democrat
+entry4 = democrat
+entry5 = democrat
+entry6 = republican
+entry7 = republican
+entry8 = democrat

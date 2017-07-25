@@ -1,0 +1,14 @@
+WIND=2 :
+| HUMIDITY=1 :
+| | TEMPERATURE=1 : 1
+| | TEMPERATURE=2 : 1
+| HUMIDITY=2 : 1
+WIND=1 :
+| HUMIDITY=1 :
+| | TEMPERATURE=1 : 1
+| | TEMPERATURE=2 : 1
+| HUMIDITY=2 :
+| | TEMPERATURE=3 : 1
+| | TEMPERATURE=2 : 1
+Accuracy on Training Set (14 instances ) = 64.28571428571429 %
+Accuracy on Test Set (3 instances ) = 33.33333333333333 %
