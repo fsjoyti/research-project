@@ -7,17 +7,21 @@ Warning--entry type for "adaboostsecond" isn't style-file defined
 --line 231 of file Bibiliography.bib
 Warning--entry type for "adaboostfirst" isn't style-file defined
 --line 238 of file Bibiliography.bib
+Warning--entry type for "adaboostthird" isn't style-file defined
+--line 246 of file Bibiliography.bib
 Warning--entry type for "knearest91" isn't style-file defined
---line 245 of file Bibiliography.bib
+--line 254 of file Bibiliography.bib
 Warning--entry type for "som3" isn't style-file defined
---line 252 of file Bibiliography.bib
+--line 261 of file Bibiliography.bib
 Warning--entry type for "haa1" isn't style-file defined
---line 259 of file Bibiliography.bib
+--line 268 of file Bibiliography.bib
 Warning--entry type for "hda1" isn't style-file defined
---line 266 of file Bibiliography.bib
+--line 275 of file Bibiliography.bib
 Warning--entry type for "c4.5" isn't style-file defined
---line 274 of file Bibiliography.bib
+--line 284 of file Bibiliography.bib
+Warning--entry type for "smo" isn't style-file defined
+--line 291 of file Bibiliography.bib
 Warning--empty chapter and pages in jurafsky_martin_2008
 Warning--empty year in backpropagation2
 Warning--empty year in lasso1
-(There were 11 warnings)
+(There were 13 warnings)

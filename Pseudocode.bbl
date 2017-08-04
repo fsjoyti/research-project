@@ -28,6 +28,14 @@
 . (.g).
 \newblock Self-organizing maps.
 
+\bibitem[., 2009]{smo}
+. (2009).
+\newblock The simplified smo algorithm.
+
+\bibitem[., 2012]{adaboostthird}
+. (2012).
+\newblock Introduction to boosting.
+
 \bibitem[., 2014]{pca1}
 . (2014).
 \newblock Principal component analysis.

@@ -209,19 +209,15 @@
             \State choose $\alpha_t > 0 $
             \State compute new distribution $D_{t+1}$:
              \For{ all $i$ }
-              \State multiply $D_t(x)$ by \begin{numcases}{}
+              \State multiply $D_t(x)$ by 
+              \begin{numcases}{}
   e^{-\alpha_t}, &  ($<1$) $ \text{if}\  \  y_i = h_t(x_i) $\\
    e^{\alpha_t}, & ($>1$) $ \text{if}\  \  y_i \neq h_t(x_i) $
 \end{numcases}
 \State renormalize
          \EndFor 
          
-  \State output final classifier $H_{final(x)} = sign (\sum\alpha_t h_t(x))$
-            
-        
-        
-         
-        
+  \State output final classifier $H_{final(x)} = sign (\sum\alpha_t h_t(x))$    
         \EndFor
         
        
@@ -232,7 +228,7 @@
 
 
  \begin{algorithm}
-   \caption{Adaboost4 ~\cite{adaboostsecond} Link:23,35,93,95}
+   \caption{Adaboost4 ~\cite{adaboostthird} Link:23,35,93,95}
     \begin{algorithmic}[1]
      \INPUT 
     \Statex Training data $\{(x_i,y_i)_{i=1}^N \ \text{where}\ x_i \in  \mathbb{R}^k \ \text{and} \  y_i \in \{-1,1\} \}$
@@ -449,8 +445,6 @@
     \INPUT{ProblemSize,InputPatterns,Max number of iterations,$CodebookVectors_{num}$,Learning rate}
      \OUTPUT{CodebookVectors}
      \State $CodebookVectors \leftarrow InitializeCodebookVectors(CodebookVectors_{num},ProblemSize) $
-     
-    
        \For{$i = 1$ to Max number of iterations}
             \State $Pattern_i \leftarrow$ SelectInputPattern(InputPatterns)
             \State $Bmu_i \leftarrow$ SelectBestMatchingUnit($Pattern_i$,CodebookVectors)
@@ -461,14 +455,7 @@
             \EndIf 
             \EndFor  
         \EndFor
-        
-       
        \State Return CodebookVectors
-
-
-
- 
-
 \end{algorithmic}
 \end{algorithm}
 
@@ -720,13 +707,13 @@ similarity).
             \State Compute the search direction $d_t = - \delta f(x_{t})$
             \If {$\abs{d_{T}} < \epsilon_{g} $}
             	\State return "Converged to critical point", output $x_t$
-            	\State Find $\alpha_{t}$ so that $f(x_{t}+\alpha_{t}d_{t}) < f(x_t)$
-            \EndIf
             
+            \EndIf
+            	\State Find $\alpha_{t}$ so that $f(x_{t}+\alpha_{t}d_{t}) < f(x_t)$
              \If {$\abs{\alpha_{t}d_{T}} < \epsilon_{x} $}
             	\State return "Converged in x", output $x_t$
-            	\State Find $\alpha_{t}$ so that $f(x_{t}+\alpha_{t}d_{t}) < f(x_t)$
             	
+
             \EndIf
             \State Let $x_{t+1} = x_t + \alpha_{t}d_{t}$
             
@@ -1047,7 +1034,7 @@ similarity).
      \OUTPUT{Clustered Data}
       \Function{DBSCAN}{$D,\epsilon,minPts$}\
       \State $C = 0$
-       \For{$\text{each point}\ P \text{in dataset} D$}
+       \For{$\text{each point}\ P \ \text{in dataset} \  D$}
         \If {$P$ is visited}
         \State continue next point
       
@@ -1099,7 +1086,7 @@ similarity).
   
 \begin{algorithmic}[1]
  \INPUT
- \Statex $x_{1},.....x_{n} \text{d length vector k}$
+ \Statex $x_{1},.....x_{n} \text{d length vector},k $
  \OUTPUT{Transform matrix R}
  \State $X \leftarrow n \times d \ \text{data matrix with } x_{i} \  \text{in each row}$
 \State  $x \leftarrow  \frac{1}{n} \sum_{i = 1}^{n} x_{i}$
@@ -1544,28 +1531,23 @@ To classify a novel instance $\textbf{x}$ once you've learned the optimal $\alph
 
 \State $population \leftarrow  new \mathunderscore population $
 \EndFor
+\EndWhile
 \State return the best individual in $population$ , according to FITNESS-FN
-
+ \EndFunction
+ 
 \Function{REPRODUCE}{$x, y $}\
 \State $n \leftarrow \text{LENGTH} $
 \State $c \leftarrow $ random number from $1\   \text{to} \ n$
 \State APPEND(SUBSTRING($x,1,c$),SUBSTRING($y,c+1,n$))
 
 \EndFunction
-
-
-\EndWhile
- 
- 
-  \EndFunction  
    
     \end{algorithmic}
 \end{algorithm} 
 
 
 \begin{algorithm}
-   \caption{SMO Algorithm ~\cite{.
-   } }
+   \caption{SMO Algorithm ~\cite{smo} }
    
    
    

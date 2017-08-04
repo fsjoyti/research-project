@@ -1,0 +1,13 @@
+training....
+Number of classes 2
+learntParameters(one per class):  [array([[-0.66873065],
+       [-0.16385876],
+       [-0.026190115],
+       [ 0.031190568],
+       [ 0.11583089],
+       [ 0.0060382942],
+       [-0.32165104],
+       [ 1.2380347]], dtype=float128)]
+final_costs:  [0.40546224114340391421]
+Accuracy on training data:  2.26600985222 %
+51.827287

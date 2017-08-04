@@ -1,0 +1,9 @@
+training....
+Number of classes 2
+learntParameters(one per class):  [array([[-1.9578675],
+       [ 0.1561365],
+       [-0.25940195],
+       [-0.52581913],
+       [-0.2409449],
+       [ 1.9804683]], dtype=float128)]
+final_costs:  [0.39958179896854884245]

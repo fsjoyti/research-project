@@ -1,0 +1,77 @@
+Test:
+{'buying': 'vhigh', 'maint': 'low', 'doors': '5more', 'persons': '2', 'lug_boot': 'big', 'safety': 'high'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'low', 'maint': 'vhigh', 'doors': '3', 'persons': 'more', 'lug_boot': 'med', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'vhigh', 'maint': 'low', 'doors': '5more', 'persons': '2', 'lug_boot': 'med', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'vhigh', 'maint': 'high', 'doors': '3', 'persons': 'more', 'lug_boot': 'small', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'med', 'maint': 'low', 'doors': '4', 'persons': '4', 'lug_boot': 'big', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'vhigh', 'maint': 'high', 'doors': '2', 'persons': '2', 'lug_boot': 'med', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'med', 'maint': 'med', 'doors': '3', 'persons': 'more', 'lug_boot': 'small', 'safety': 'high'}-acc
+Clase predicha: acc
+        --> Acierto
+
+
+{'buying': 'high', 'maint': 'low', 'doors': '5more', 'persons': '2', 'lug_boot': 'small', 'safety': 'high'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'med', 'maint': 'vhigh', 'doors': '4', 'persons': 'more', 'lug_boot': 'med', 'safety': 'med'}-acc
+Clase predicha: acc
+        --> Acierto
+
+
+{'buying': 'vhigh', 'maint': 'vhigh', 'doors': '4', 'persons': '4', 'lug_boot': 'small', 'safety': 'med'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'low', 'maint': 'med', 'doors': '5more', 'persons': 'more', 'lug_boot': 'med', 'safety': 'high'}-vgood
+Clase predicha: vgood
+        --> Acierto
+
+
+{'buying': 'high', 'maint': 'high', 'doors': '2', 'persons': '4', 'lug_boot': 'med', 'safety': 'low'}-unacc
+Clase predicha: unacc
+        --> Acierto
+
+
+{'buying': 'high', 'maint': 'med', 'doors': '2', 'persons': '4', 'lug_boot': 'small', 'safety': 'high'}-acc
+Clase predicha: acc
+        --> Acierto
+
+
+{'buying': 'low', 'maint': 'vhigh', 'doors': '4', 'persons': '4', 'lug_boot': 'big', 'safety': 'med'}-acc
+Clase predicha: acc
+        --> Acierto
+
+
+{'buying': 'high', 'maint': 'med', 'doors': '5more', 'persons': 'more', 'lug_boot': 'big', 'safety': 'med'}-acc
+Clase predicha: acc
+        --> Acierto
+
+
+(15, 15, 1.0)
