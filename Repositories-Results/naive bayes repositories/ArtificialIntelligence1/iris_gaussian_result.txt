@@ -1,0 +1,63 @@
+ID=    0, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=    1, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    2, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    3, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=    4, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    5, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=    6, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    7, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    8, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=    9, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   10, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   11, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=   12, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   13, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   14, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   15, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   16, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=   17, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   18, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=   19, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   20, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   21, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   22, predicted=  2, probability = 0.3667, true=  2, accuracy=1.00
+
+ID=   23, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   24, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   25, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   26, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   27, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+ID=   28, predicted=  2, probability = 0.3667, true=  1, accuracy=0.00
+
+ID=   29, predicted=  2, probability = 0.3667, true=  3, accuracy=0.00
+
+classification accuracy=0.3500
+
+0.04034401852391646

@@ -1,0 +1,67 @@
+ML Assignment for Iris Data Classification by Sumant Vanage, 2015HT13005
+Attempting to read "iris_shuffled2.txt"
+Read Successful.
+
+Try Parsing data set
+Parse successful.
+
+Start Training.
+Sums,Sepal length,Sepal width,Petal length,Petal width
+Iris-virginica,261.5,117.8,220.4,80.4
+Iris-setosa,205,138.9,60.5,10
+Iris-versicolor,239.8,112.2,172.1,53.3
+
+Counts,Sepal length,Sepal width,Petal length,Petal width
+Iris-virginica,40,40,40,40
+Iris-setosa,41,41,41,41
+Iris-versicolor,40,40,40,40
+
+Means,Sepal length,Sepal width,Petal length,Petal width
+Iris-virginica,6.5375,2.945,5.51,2.01
+Iris-setosa,5,3.3878,1.4756,0.2439
+Iris-versicolor,5.995,2.805,4.3025,1.3325
+
+StdDev,Sepal length,Sepal width,Petal length,Petal width
+Iris-virginica,0.6096,0.2943,0.5276,0.2827
+Iris-setosa,0.309,0.3635,0.17,0.1097
+Iris-versicolor,0.4951,0.2961,0.4486,0.2043
+
+Train successful.
+
+Start Prediction.
+Test Index,Iris-virginica,Iris-setosa,Iris-versicolor,Actual,Predicted
+3,0,0.2249,0,Iris-setosa,Iris-setosa
+6,0.0051,0,0.4782,Iris-versicolor,Iris-versicolor
+9,0,0.0194,0,Iris-setosa,Iris-setosa
+12,0.0003,0,0,Iris-virginica,Iris-virginica
+15,0,0,0.0003,Iris-versicolor,Iris-versicolor
+18,0.2665,0,0,Iris-virginica,Iris-virginica
+21,0.4797,0,0.0005,Iris-virginica,Iris-virginica
+24,0.4464,0,0,Iris-virginica,Iris-virginica
+27,0.0033,0,1.0087,Iris-versicolor,Iris-versicolor
+30,0,0.0254,0,Iris-setosa,Iris-setosa
+33,0.0001,0,0.8862,Iris-versicolor,Iris-versicolor
+36,0.0481,0,0.201,Iris-versicolor,Iris-versicolor
+39,0.1777,0,0,Iris-virginica,Iris-virginica
+42,0,2.8539,0,Iris-setosa,Iris-setosa
+45,0.2207,0,0.0071,Iris-virginica,Iris-virginica
+48,0,0,0.2101,Iris-versicolor,Iris-versicolor
+51,0.0004,0,0.3513,Iris-versicolor,Iris-versicolor
+54,0.0049,0,1.0374,Iris-versicolor,Iris-versicolor
+57,0.0001,0,0.3088,Iris-versicolor,Iris-versicolor
+60,0,3.3057,0,Iris-setosa,Iris-setosa
+63,0,0.2948,0,Iris-setosa,Iris-setosa
+66,0,4.1563,0,Iris-setosa,Iris-setosa
+69,0.0053,0,0,Iris-virginica,Iris-virginica
+72,0,5.0627,0,Iris-setosa,Iris-setosa
+75,0.0736,0,0.0013,Iris-virginica,Iris-virginica
+78,0,0,0.0017,Iris-versicolor,Iris-versicolor
+81,0.6095,0,0.0017,Iris-virginica,Iris-virginica
+84,0.0014,0,0,Iris-virginica,Iris-virginica
+87,0,0.5626,0,Iris-setosa,Iris-setosa
+
+Performance Metrics:
+Total=29, Correct=29, Incorrect=0, Undetermined=0
+Accuracy = (Correct/Total)*100 = 100%
+Prediction ended.
+Press "Enter" to exit.

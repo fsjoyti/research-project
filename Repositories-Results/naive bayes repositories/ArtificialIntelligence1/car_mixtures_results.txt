@@ -1,0 +1,33 @@
+ID=    0, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    1, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    2, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    3, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    4, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    5, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    6, predicted=  0, probability = 0.4825, true=  1, accuracy=0.00
+
+ID=    7, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=    8, predicted=  0, probability = 0.4825, true=  1, accuracy=0.00
+
+ID=    9, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=   10, predicted=  0, probability = 0.4825, true=  3, accuracy=0.00
+
+ID=   11, predicted=  0, probability = 0.4825, true=  0, accuracy=1.00
+
+ID=   12, predicted=  0, probability = 0.4825, true=  1, accuracy=0.00
+
+ID=   13, predicted=  0, probability = 0.4825, true=  1, accuracy=0.00
+
+ID=   14, predicted=  0, probability = 0.4825, true=  2, accuracy=0.00
+
+classification accuracy=0.9000
+
+0.6077374916350887

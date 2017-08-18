@@ -1,0 +1,30 @@
+# called with:       ./lr_sgd -o weights.out -p predict.out -t yeast_new_test.txt yeast_new.txt
+# learning rate:     0.001
+# convergence rate:  0.005
+# l1 penalty weight: 0.0001
+# max. iterations:   50000
+# training data:     yeast_new.txt
+# model output:      weights.out
+# test data:         yeast_new_test.txt
+# predictions:       predict.out
+# training examples: 800
+# features:          8
+# stochastic gradient descent
+# convergence: 0.0160 l1-norm: 4.8507e+00 iterations: 100
+# convergence: 0.0118 l1-norm: 7.8015e+00 iterations: 200
+# convergence: 0.0092 l1-norm: 1.0102e+01 iterations: 300
+# convergence: 0.0073 l1-norm: 1.1956e+01 iterations: 400
+# convergence: 0.0060 l1-norm: 1.3484e+01 iterations: 500
+# convergence: 0.0051 l1-norm: 1.4774e+01 iterations: 600
+# sparsity:    1.0000 (8/8)
+
+accuracy:    0.2250 (45/200)
+# precision:   0.0800
+# recall:      0.2000
+# mcc:         -0.5068
+# tp:          10
+# tn:          35
+# fp:          115
+# fn:          40
+# written predictions to file predict.out
+1.01179

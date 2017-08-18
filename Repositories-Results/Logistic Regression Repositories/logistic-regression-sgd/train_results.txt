@@ -1,0 +1,237 @@
+# learning rate:     0.001
+# convergence rate:  0.005
+# l1 penalty weight: 0.0001
+# max. iterations:   50000
+# training data:     train_new.txt
+# model output:      weights.out
+# test data:         test_new.txt
+# predictions:       predict.out
+# training examples: 800
+# features:          6
+# stochastic gradient descent
+# sparsity:    1.0000 (6/6)
+# written weights to file weights.out
+# classifying
+# accuracy:    0.7241 (147/203)
+# precision:   0.6207
+# recall:      0.2857
+# mcc:         0.2739
+# tp:          18
+# tn:          129
+# fp:          11
+# fn:          45
+# written predictions to file predict.out
+time elapsed:0.118685
+
+#Output of the predict.out file:
+0
+1
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Output of the weights.out file:
+1 -0.511196
+2 0.160851
+3 0.245598
+4 0.598215
+5 -1.1364
+6 -1.19494
+

@@ -1,0 +1,25 @@
+# called with:       ./lr_sgd -o weights.out -p predict.out -t soybean_libsvm_test.txt soybean_libsvm.txt
+# learning rate:     0.001
+# convergence rate:  0.005
+# l1 penalty weight: 0.0001
+# max. iterations:   50000
+# training data:     soybean_libsvm.txt
+# model output:      weights.out
+# test data:         soybean_libsvm_test.txt
+# predictions:       predict.out
+# training examples: 361
+# features:          35
+# stochastic gradient descent
+# convergence: 0.0069 l1-norm: 8.2196e+00 iterations: 100
+# sparsity:    1.0000 (35/35)
+# written weights to file weights.out
+# accuracy:    0.0400 (8/200)
+# precision:   0.0400
+# recall:      1.0000
+# mcc:         -nan
+# tp:          8
+# tn:          0
+# fp:          192
+# fn:          0
+# written predictions to file predict.out
+0.763793

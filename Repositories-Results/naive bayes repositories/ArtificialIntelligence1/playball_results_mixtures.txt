@@ -1,0 +1,9 @@
+ID=    0, predicted=  0, probability = 0.5000, true=  1, accuracy=0.00
+
+ID=    1, predicted=  0, probability = 0.5000, true=  1, accuracy=0.00
+
+ID=    2, predicted=  0, probability = 0.5000, true=  1, accuracy=0.00
+
+classification accuracy=0.3000
+
+0.006329620612783637

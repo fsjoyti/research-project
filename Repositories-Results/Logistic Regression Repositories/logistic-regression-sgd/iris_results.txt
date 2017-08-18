@@ -1,0 +1,23 @@
+# called with:       ./lr_sgd -o weights.out -p predict.out -t iris_new_test.txt iris_new.txt
+# learning rate:     0.001
+# convergence rate:  0.005
+# l1 penalty weight: 0.0001
+# max. iterations:   50000
+# training data:     iris_new.txt
+# model output:      weights.out
+# test data:         iris_new_test.txt
+# predictions:       predict.out
+# training examples: 120
+# features:          4
+# stochastic gradient descent
+# convergence: 0.0072 l1-norm: 3.6272e+00 iterations: 100
+# sparsity:    1.0000 (4/4)
+# precision:   0.3000
+# recall:      1.0000
+# mcc:         -nan
+# tp:          9
+# tn:          0
+# fp:          21
+# fn:          0
+# written predictions to file predict.out
+0.021802
